@@ -1,13 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class MenuGameManager : MonoBehaviour
+public class MenuGameManager : SceneManagerBase
 {
-    [TitleGroup("Back")]
-    public string targetSceneName;
-
-    private void Start()
-    {
-        
-    }
+    
 }

@@ -163,7 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94ef325ad30c844692cdcdd90c4f564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: 
+  useBackButton: 1
+  backTargetSceneName: Main Menu
+  backButtonPosOverrider: {fileID: 0}
 --- !u!1 &352792140
 GameObject:
   m_ObjectHideFlags: 0

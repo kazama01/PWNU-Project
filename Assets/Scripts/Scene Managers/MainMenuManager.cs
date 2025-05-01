@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainMenuManager : MonoBehaviour
+public class MainMenuManager : SceneManagerBase
 {
     public static MainMenuManager Instance;
 
