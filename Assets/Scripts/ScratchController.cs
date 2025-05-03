@@ -7,32 +7,83 @@ using MEC;
 
 public class ScratchController : MonoBehaviour
 {
-    public RawImage targetImage;
+    public Texture2D originalImage;
+    public RawImage originalRawImageComp;
+    public RawImage scratchRawImageComp;
     public Material targetMaterial;
-    public int textureSize = 512;
+
+    //public int textureSize = 512;
     public int brushSize = 64;
     public Color brushColor = Color.white;
 
-    private Texture2D maskTexture;
-    private RectTransform imageRect;
-    private GraphicRaycaster raycaster;
-    private PointerEventData pointerEventData;
-    private EventSystem eventSystem;
+    [ShowInInspector]
+    [ReadOnly]
+    Texture2D _generatedMaskTexture;
+    RectTransform _imageRect;
+    GraphicRaycaster _raycaster;
+    PointerEventData _pointerEventData;
+    EventSystem _eventSystem;
+
+    float _width;
+    float _height;
 
     void Start()
     {
-        maskTexture = new Texture2D(textureSize, textureSize, TextureFormat.RGB24, false);
-        ClearMask();
+        _generatedMaskTexture = GetAlphaMap(originalImage);
 
-        targetMaterial.SetTexture("_MaskTex", maskTexture);
-        targetImage.material = targetMaterial;
+        _width = originalImage.width;
+        _height = originalImage.height;
 
-        imageRect = targetImage.rectTransform;
-        raycaster = FindFirstObjectByType<GraphicRaycaster>();
-        eventSystem = FindFirstObjectByType<EventSystem>();
+        targetMaterial.SetTexture("_MaskTex", _generatedMaskTexture);
+        originalRawImageComp.texture = originalImage;
+        scratchRawImageComp.material = targetMaterial;
+
+        _imageRect = scratchRawImageComp.rectTransform;
+        _raycaster = FindFirstObjectByType<GraphicRaycaster>();
+        _eventSystem = FindFirstObjectByType<EventSystem>();
 
         //DelayedUpdateCoHandle = Timing.RunCoroutine(DelayedUpdateCo());
     }
+
+    [Button]
+    Texture2D GetAlphaMap(Texture2D texture, float threshold = 0.5f)
+    {
+        if (texture == null)
+        {
+            Debug.LogError("Original texture is null.");
+            return null;
+        }
+
+        // Create a new texture to store the alpha map
+        Texture2D alphaMap = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+
+        // Get all pixels from the original texture
+        Color[] pixels = texture.GetPixels();
+
+        // Create an array to store the black-and-white alpha values
+        Color[] alphaPixels = new Color[pixels.Length];
+
+        // Apply the threshold to generate a black-and-white alpha map
+        for (int i = 0; i < pixels.Length; i++)
+        {
+            float alpha = pixels[i].a; // Get the alpha value
+            if (alpha > threshold)
+            {
+                alphaPixels[i] = Color.black;
+            }
+            else
+            {
+                alphaPixels[i] = Color.white;
+            }
+        }
+
+        // Set the black-and-white alpha values to the new texture
+        alphaMap.SetPixels(alphaPixels);
+        alphaMap.Apply();
+
+        return alphaMap;
+    }
+
 
     private void OnDestroy()
     {
@@ -43,22 +94,22 @@ public class ScratchController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            pointerEventData = new PointerEventData(eventSystem);
-            pointerEventData.position = Input.mousePosition;
+            _pointerEventData = new PointerEventData(_eventSystem);
+            _pointerEventData.position = Input.mousePosition;
 
             List<RaycastResult> results = new List<RaycastResult>();
-            raycaster.Raycast(pointerEventData, results);
+            _raycaster.Raycast(_pointerEventData, results);
 
             foreach (var result in results)
             {
-                if (result.gameObject == targetImage.gameObject)
+                if (result.gameObject == scratchRawImageComp.gameObject)
                 {
                     Vector2 localPoint;
-                    RectTransformUtility.ScreenPointToLocalPointInRectangle(imageRect, Input.mousePosition, null, out localPoint);
+                    RectTransformUtility.ScreenPointToLocalPointInRectangle(_imageRect, Input.mousePosition, null, out localPoint);
 
-                    Vector2 pivot = imageRect.pivot;
-                    float x = (localPoint.x + imageRect.rect.width * pivot.x) / imageRect.rect.width;
-                    float y = (localPoint.y + imageRect.rect.height * pivot.y) / imageRect.rect.height;
+                    Vector2 pivot = _imageRect.pivot;
+                    float x = (localPoint.x + _imageRect.rect.width * pivot.x) / _imageRect.rect.width;
+                    float y = (localPoint.y + _imageRect.rect.height * pivot.y) / _imageRect.rect.height;
 
                     PaintAtUV(new Vector2(x, y));
                     break;
@@ -82,20 +133,20 @@ public class ScratchController : MonoBehaviour
         }
     }
 
-    void ClearMask()
-    {
-        Color[] colors = new Color[textureSize * textureSize];
-        for (int i = 0; i < colors.Length; i++)
-            colors[i] = Color.black;
+    //void ClearMask()
+    //{
+    //    Color[] colors = new Color[textureSize * textureSize];
+    //    for (int i = 0; i < colors.Length; i++)
+    //        colors[i] = Color.black;
 
-        maskTexture.SetPixels(colors);
-        maskTexture.Apply();
-    }
+    //    _generatedMaskTexture.SetPixels(colors);
+    //    _generatedMaskTexture.Apply();
+    //}
 
     void PaintAtUV(Vector2 uv)
     {
-        int x = (int)(uv.x * textureSize);
-        int y = (int)(uv.y * textureSize);
+        int x = (int)(uv.x * _width);
+        int y = (int)(uv.y * _height);
 
         for (int i = -brushSize; i < brushSize; i++)
         {
@@ -104,16 +155,16 @@ public class ScratchController : MonoBehaviour
                 int px = x + i;
                 int py = y + j;
 
-                if (px >= 0 && px < textureSize && py >= 0 && py < textureSize)
+                if (px >= 0 && px < _width && py >= 0 && py < _height)
                 {
                     float dist = Vector2.Distance(new Vector2(px, py), new Vector2(x, y));
                     if (dist <= brushSize)
-                        maskTexture.SetPixel(px, py, brushColor);
+                        _generatedMaskTexture.SetPixel(px, py, brushColor);
                 }
             }
         }
 
-        maskTexture.Apply();
+        _generatedMaskTexture.Apply();
     }
 
     [Button]
@@ -123,7 +174,7 @@ public class ScratchController : MonoBehaviour
         int whiteCount = 0;
 
         // Mengakses seluruh piksel dalam gambar
-        Color[] pixels = maskTexture.GetPixels();
+        Color[] pixels = _generatedMaskTexture.GetPixels();
 
         // Menghitung jumlah piksel hitam dan putih
         foreach (Color pixel in pixels)
@@ -155,26 +206,4 @@ public class ScratchController : MonoBehaviour
             Debug.Log("Gambar tidak memiliki piksel hitam atau putih.");
         }
     }
-
-    void GetAlphaFromTexture()
-    {
-        if (maskTexture == null)
-        {
-            Debug.LogError("Mask texture is null.");
-            return;
-        }
-
-        // Get all pixels from the texture
-        Color[] pixels = maskTexture.GetPixels();
-
-        // Extract alpha values
-        List<float> alphaValues = new List<float>();
-        foreach (Color pixel in pixels)
-        {
-            alphaValues.Add(pixel.a); // Add the alpha value to the list
-        }
-
-        Debug.Log($"Extracted {alphaValues.Count} alpha values from the texture.");
-    }
-
 }
