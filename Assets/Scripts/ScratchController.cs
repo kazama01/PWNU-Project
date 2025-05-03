@@ -5,7 +5,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using MEC;
 
-public class TexturePainterUI : MonoBehaviour
+public class ScratchController : MonoBehaviour
 {
     public RawImage targetImage;
     public Material targetMaterial;
@@ -155,4 +155,26 @@ public class TexturePainterUI : MonoBehaviour
             Debug.Log("Gambar tidak memiliki piksel hitam atau putih.");
         }
     }
+
+    void GetAlphaFromTexture()
+    {
+        if (maskTexture == null)
+        {
+            Debug.LogError("Mask texture is null.");
+            return;
+        }
+
+        // Get all pixels from the texture
+        Color[] pixels = maskTexture.GetPixels();
+
+        // Extract alpha values
+        List<float> alphaValues = new List<float>();
+        foreach (Color pixel in pixels)
+        {
+            alphaValues.Add(pixel.a); // Add the alpha value to the list
+        }
+
+        Debug.Log($"Extracted {alphaValues.Count} alpha values from the texture.");
+    }
+
 }
