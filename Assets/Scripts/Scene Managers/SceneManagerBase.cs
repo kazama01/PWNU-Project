@@ -18,7 +18,7 @@ public abstract class SceneManagerBase : MonoBehaviour
     [ShowIf("@useBackButton")]
     public Transform backButtonPosOverrider;
 
-    private void Start()
+    protected virtual void Start()
     {
         Timing.RunCoroutine(ForceSetBackButtonCo().CancelWith(gameObject));
     }
@@ -39,19 +39,19 @@ public abstract class SceneManagerBase : MonoBehaviour
     [Button]
     void SetBackButton()
     {
-        BackManager.Instance.ShowBackButton(useBackButton);
+        BackManager.Instance?.ShowBackButton(useBackButton);
         if (useBackButton)
         {
-            BackManager.Instance.ChangeBackDestinationScene(backTargetSceneName);
+            BackManager.Instance?.ChangeBackDestinationScene(backTargetSceneName);
         }
 
         if (backButtonPosOverrider)
         {
-            BackManager.Instance.ChangeBackButtonPos(backButtonPosOverrider);
+            BackManager.Instance?.ChangeBackButtonPos(backButtonPosOverrider);
         }
         else
         {
-            BackManager.Instance.ResetBackButtonPos();
+            BackManager.Instance?.ResetBackButtonPos();
         }
     }
 }

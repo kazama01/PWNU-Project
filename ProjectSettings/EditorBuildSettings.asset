@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Petualangan Menulis.unity
     guid: d049dfb55630e21468ea48e2d8592355
+  - enabled: 1
+    path: Assets/Scenes/Hijaiyah Hunter.unity
+    guid: e21b3d1028c627d4d8daef542f674a24
+  - enabled: 1
+    path: Assets/Scenes/Gosok_Dev.unity
+    guid: 3b74a6293be298a48b6d3ee71557b743
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

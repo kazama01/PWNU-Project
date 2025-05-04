@@ -868,7 +868,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &1969482540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,6 +944,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 352792141}
     m_Modifications:
+    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: buttonType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: _destinationSceneName
+      value: Hijaiyah Hunter
+      objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

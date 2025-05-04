@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Ba
+  m_EditorClassIdentifier: 
+  letter: 1
+  letterImage: {fileID: 2800000, guid: 7c771a2821fd4084ea8fc0d206f62190, type: 3}
+  objects:
+  - objectName: babun_pintu
+    nameImage: {fileID: 2800000, guid: 66fbd370ddf238940847b669f62bd9f2, type: 3}
+    objectImage: {fileID: 2800000, guid: d3eea8ee3f1e01b43a09f5b3377a3cdd, type: 3}
+    audio: {fileID: 0}
+  - objectName: baqorotun_sapi
+    nameImage: {fileID: 2800000, guid: 0d0aa1684d5374246a6c18a2792fe691, type: 3}
+    objectImage: {fileID: 2800000, guid: bb24b52d03775ec4da3535df0803eaad, type: 3}
+    audio: {fileID: 0}

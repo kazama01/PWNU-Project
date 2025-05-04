@@ -13,14 +13,16 @@ public class ScratchController : MonoBehaviour
     public Material targetMaterial;
 
     //public int textureSize = 512;
-    public int brushSize = 64;
+    public int brushSize = 48;
     public Color brushColor = Color.white;
+
+    [InfoBox("Place the canvas here")]
+    public GraphicRaycaster raycaster;
 
     [ShowInInspector]
     [ReadOnly]
     Texture2D _generatedMaskTexture;
-    RectTransform _imageRect;
-    GraphicRaycaster _raycaster;
+    RectTransform _imageRect;  
     PointerEventData _pointerEventData;
     EventSystem _eventSystem;
 
@@ -29,20 +31,29 @@ public class ScratchController : MonoBehaviour
 
     void Start()
     {
-        _generatedMaskTexture = GetAlphaMap(originalImage);
-
-        _width = originalImage.width;
-        _height = originalImage.height;
-
-        targetMaterial.SetTexture("_MaskTex", _generatedMaskTexture);
-        originalRawImageComp.texture = originalImage;
-        scratchRawImageComp.material = targetMaterial;
-
         _imageRect = scratchRawImageComp.rectTransform;
-        _raycaster = FindFirstObjectByType<GraphicRaycaster>();
         _eventSystem = FindFirstObjectByType<EventSystem>();
+    }
 
-        //DelayedUpdateCoHandle = Timing.RunCoroutine(DelayedUpdateCo());
+    [Button]
+    public void Setup(Texture2D image)
+    {
+        if (image != null)
+        {
+            originalImage = image;
+            _generatedMaskTexture = GetAlphaMap(originalImage);
+
+            _width = originalImage.width;
+            _height = originalImage.height;
+
+            targetMaterial.SetTexture("_MaskTex", _generatedMaskTexture);
+            originalRawImageComp.texture = originalImage;
+            scratchRawImageComp.material = targetMaterial;
+        }
+        else
+        {
+            Debug.LogError("No object found in the list.");
+        }
     }
 
     [Button]
@@ -84,7 +95,6 @@ public class ScratchController : MonoBehaviour
         return alphaMap;
     }
 
-
     private void OnDestroy()
     {
         Timing.KillCoroutines(DelayedUpdateCoHandle);
@@ -98,7 +108,7 @@ public class ScratchController : MonoBehaviour
             _pointerEventData.position = Input.mousePosition;
 
             List<RaycastResult> results = new List<RaycastResult>();
-            _raycaster.Raycast(_pointerEventData, results);
+            raycaster.Raycast(_pointerEventData, results);
 
             foreach (var result in results)
             {
