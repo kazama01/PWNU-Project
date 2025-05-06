@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d61b93e79395c48b79e213d6602f15, type: 3}
+  m_Name: Alif
+  m_EditorClassIdentifier: 
+  letter: 0
+  fathahAudio: {fileID: 8300000, guid: 0688f73ae41635f48b6e7f612698e5d6, type: 3}
+  kasrahAudio: {fileID: 8300000, guid: 4210fc20847fc934db5961982f4a8365, type: 3}
+  dammahAudio: {fileID: 8300000, guid: 0038c8cf9f018c34999f4c647b6c4173, type: 3}
+  fathahSprite: {fileID: 21300000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  kasrahSprite: {fileID: 6055636652924055878, guid: 66fbd370ddf238940847b669f62bd9f2, type: 3}
+  dammahSprite: {fileID: 5444376806850762142, guid: 0d0aa1684d5374246a6c18a2792fe691, type: 3}
