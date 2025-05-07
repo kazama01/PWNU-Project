@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gosok_Dev.unity
     guid: 3b74a6293be298a48b6d3ee71557b743
+  - enabled: 1
+    path: Assets/Scenes/Harokat.unity
+    guid: 57ee6df6021ca0b4d92eb2dbf9a7ab97
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

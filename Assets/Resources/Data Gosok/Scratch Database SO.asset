@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c775aab0f3f181642a53fcaed85e869f, type: 3}
-  m_Name: ScratchDatabaseSO
+  m_Name: Scratch Database SO
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
