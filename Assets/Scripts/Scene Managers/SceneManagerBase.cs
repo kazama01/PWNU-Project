@@ -36,6 +36,7 @@ public abstract class SceneManagerBase : MonoBehaviour
         }
     }
 
+    [TitleGroup("General Scene Setting")]
     [Button]
     void SetBackButton()
     {

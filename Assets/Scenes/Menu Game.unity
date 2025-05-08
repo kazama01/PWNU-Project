@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
-      value: Mode Guru Button
+      value: Doa & Sholawat Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -716,6 +716,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 352792141}
     m_Modifications:
+    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: buttonType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: _destinationSceneName
+      value: Muslim Heroes
+      objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -810,7 +818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
-      value: Metode Mengaji Button
+      value: Muslim Heroes Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

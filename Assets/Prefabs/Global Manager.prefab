@@ -1414,7 +1414,6 @@ MonoBehaviour:
   messageHeaderTxt_Center: {fileID: 206943468496495542}
   messageTxt_Center: {fileID: 7721358327557608681}
   messageIconImg_Center: {fileID: 227706216221282373}
-  closeMessageLabel_Center: {fileID: 7813470571800472144}
   messageIcons: []
   Presets:
   - presetId: default

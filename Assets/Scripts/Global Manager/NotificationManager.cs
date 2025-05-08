@@ -3,12 +3,14 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NotificationManager : MonoBehaviour
 {
+    public static event Action<NotificationRequest> OnNotificationClosed;
+    public static event Action<NotificationType> OnAllNotificationTypeCleared;
+
     public static NotificationManager Instance;
 
     public Transform notificationParent;
@@ -18,8 +20,6 @@ public class NotificationManager : MonoBehaviour
     public TextMeshProUGUI messageHeaderTxt_Center;
     public TextMeshProUGUI messageTxt_Center;
     public Image messageIconImg_Center;
-    //public Image messageImageImg_Center;
-    public GameObject closeMessageLabel_Center;
 
     [TitleGroup("Data")]
     public List<Sprite> messageIcons;
@@ -29,25 +29,39 @@ public class NotificationManager : MonoBehaviour
 
     [TitleGroup("Queue")]
     [ShowInInspector]
-    public Queue<NotificationRequest> CenterNotificationQueue;
+    [ReadOnly]
+    private Dictionary<NotificationType, Queue<NotificationRequest>> notificationQueues;
+
     [TitleGroup("Queue")]
     [ShowInInspector]
-    public Queue<NotificationRequest> TopNotificationQueue;
+    [ReadOnly]
+    private Dictionary<NotificationType, bool> isNotificationActive;
+
+    [TitleGroup("Queue")]
+    [ShowInInspector]
+    [ReadOnly]
+    public NotificationRequest ActiveNotification { get; private set; }
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
 
-        CenterNotificationQueue = new Queue<NotificationRequest>();
-        TopNotificationQueue = new Queue<NotificationRequest>();
+        notificationQueues = new Dictionary<NotificationType, Queue<NotificationRequest>>();
+        isNotificationActive = new Dictionary<NotificationType, bool>();
+
+        foreach (NotificationType type in Enum.GetValues(typeof(NotificationType)))
+        {
+            notificationQueues[type] = new Queue<NotificationRequest>();
+            isNotificationActive[type] = false;
+        }
     }
 
     [TitleGroup("Debug")]
     [Button]
     public void RequestNotification(string header, string message, string presetId = "default")
     {
-        NotificationRequest request = new NotificationRequest()
+        NotificationRequest request = new NotificationRequest
         {
             presetId = presetId,
             headerMessage = header,
@@ -65,101 +79,94 @@ public class NotificationManager : MonoBehaviour
 
         if (selectedPreset == null)
         {
-            Debug.Log($"Selected preset is Null");
+            Debug.LogError($"Preset with ID '{request.presetId}' not found.");
             return;
         }
 
         NotificationType notifType = selectedPreset.notificationType;
+        notificationQueues[notifType].Enqueue(request);
 
-        if (notifType == NotificationType.Center)
+        if (!isNotificationActive[notifType])
         {
-            CenterNotificationQueue.Enqueue(request);
+            ShowNextNotification(notifType);
         }
-        else if (notifType == NotificationType.Top)
-        {
-            TopNotificationQueue.Enqueue(request);
-        }
-
-        CheckQueue(notifType);
     }
 
-    void ShowNotification(NotificationRequest request)
+    private void ShowNextNotification(NotificationType notificationType)
+    {
+        if (notificationQueues[notificationType].Count == 0)
+        {
+            isNotificationActive[notificationType] = false;
+            OnAllNotificationTypeCleared?.Invoke(notificationType);
+            return;
+        }
+
+        isNotificationActive[notificationType] = true;
+        ActiveNotification = notificationQueues[notificationType].Dequeue();
+        ShowNotification(ActiveNotification);
+    }
+
+    private void ShowNotification(NotificationRequest request)
     {
         NotificationPreset selectedPreset = Presets.Find(x => x.presetId == request.presetId);
 
         if (selectedPreset == null)
         {
-            Debug.Log($"Selected preset is Null");
+            Debug.LogError($"Preset with ID '{request.presetId}' not found.");
             return;
         }
 
-        if (selectedPreset.notificationType == NotificationType.Center)
+        switch (selectedPreset.notificationType)
         {
-            if (selectedPreset.isInfinite)
-            {
-                selectedPreset.canBeClosedByClick = true;
-            }
-            else
-            {
-                DelayCloseNotificationCoHandle_Center = Timing.RunCoroutine(DelayCloseNotificationCo_Center(selectedPreset.duration));
-            }
-
-            messageHeaderTxt_Center.text = request.headerMessage;
-            messageTxt_Center.text = request.message;
-
-            if (messageIcons != null &&
-                selectedPreset != null &&
-                selectedPreset.messageIconIndex >= 0 &&
-                selectedPreset.messageIconIndex < messageIcons.Count &&
-                messageIcons[selectedPreset.messageIconIndex] != null &&
-                messageIconImg_Center != null)
-            {
-                messageIconImg_Center.sprite = messageIcons[selectedPreset.messageIconIndex];
-            }
-
-            centerNotification.SetActive(true);
-        }
-        else if (selectedPreset.notificationType == NotificationType.Top)
-        {
+            case NotificationType.Center:
+                ShowCenterNotification(request, selectedPreset);
+                break;
+            case NotificationType.Top:
+                // Implement Top notification logic here
+                break;
+            case NotificationType.Bottom:
+                // Implement Bottom notification logic here
+                break;
         }
     }
 
-    public void CloseNotification_Center()
+    private void ShowCenterNotification(NotificationRequest request, NotificationPreset preset)
     {
-        CloseNotification(NotificationType.Center);
+        messageHeaderTxt_Center.text = request.headerMessage;
+        messageTxt_Center.text = request.message;
+
+        if (preset.messageIconIndex >= 0 && preset.messageIconIndex < messageIcons.Count)
+        {
+            messageIconImg_Center.sprite = messageIcons[preset.messageIconIndex];
+        }
+
+        centerNotification.SetActive(true);
+
+        if (!preset.isInfinite)
+        {
+            Timing.RunCoroutine(CloseNotificationAfterDelay(NotificationType.Center, preset.duration));
+        }
+    }
+
+    private IEnumerator<float> CloseNotificationAfterDelay(NotificationType notificationType, float delay)
+    {
+        yield return Timing.WaitForSeconds(delay);
+        CloseNotification(notificationType);
     }
 
     public void CloseNotification(NotificationType notificationType)
     {
         if (notificationType == NotificationType.Center)
         {
-            Timing.KillCoroutines(DelayCloseNotificationCoHandle_Center);
             centerNotification.SetActive(false);
-
-            CheckQueue(notificationType);
         }
-        else if (notificationType == NotificationType.Top)
-        {
 
-        }
+        OnNotificationClosed?.Invoke(ActiveNotification);
+        ShowNextNotification(notificationType);
     }
-
-    CoroutineHandle DelayCloseNotificationCoHandle_Center;
-    IEnumerator<float> DelayCloseNotificationCo_Center(float delay)
+    public void CloseNotification_Center()
     {
-        yield return Timing.WaitForSeconds(delay);
-        CloseNotification_Center();
-    }
-
-    void CheckQueue(NotificationType notificationType)
-    {
-        if (notificationType == NotificationType.Center)
-        {
-            if (CenterNotificationQueue.Count > 0)
-            {
-                ShowNotification(CenterNotificationQueue.Dequeue());
-            }
-        }
+        CloseNotification(NotificationType.Center);
     }
 }
 
@@ -185,7 +192,22 @@ public struct NotificationRequest
 {
     public string presetId;
     public string headerMessage;
+
+    [TextArea(3, 5)]
     public string message;
+
+    [ShowInInspector]
+    public string RequestId
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(headerMessage))
+            {
+                return string.Empty;
+            }
+            return headerMessage.ToLower().Replace(" ", "_");
+        }
+    }
 }
 
 public enum NotificationType
