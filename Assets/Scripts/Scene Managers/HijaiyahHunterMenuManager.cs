@@ -1,18 +1,28 @@
 using HijaiyahHunterMenu;
 using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
 
 public class HijaiyahHunterMenuManager : SceneManagerBase
 {
+    public static HijaiyahHunterMenuManager Instance;
+
     [Title("Hijaiyah Hunter", "SpawnButtons() is based on Sprite Atlas count")]
     public SpriteAtlas spriteAtlas;
     public LetterButtonUI letterButtonPrefab;
     public Transform buttonParent;
+
     [ShowInInspector]
     [ReadOnly]
+    [NonSerialized]
     List<GameObject> _spawnedButton;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     protected override void Start()
     {

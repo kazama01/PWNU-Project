@@ -1,12 +1,23 @@
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
+using System;
 using UnityEngine;
+using MuslimHeroesMenu;
 
 public class MuslimHeroesManager : SceneManagerBase
 {
     public static MuslimHeroesManager Instance;
 
     [Title("Muslim Heroes")]
+    public MuslimHeroDatabaseSO MuslimHeroDatabaseSO;
+    public GameObject muslimHeroBtnPrefab;
+    public Transform buttonParent;
     public NotificationRequest notificationRequest;
+
+    [ShowInInspector]
+    [ReadOnly]
+    [NonSerialized]
+    List<GameObject> _spawnedButton;
 
     private void Awake()
     {
@@ -20,6 +31,8 @@ public class MuslimHeroesManager : SceneManagerBase
         NotificationManager.Instance.RequestNotification(notificationRequest);
 
         NotificationManager.OnNotificationClosed += NotificationClosedHandler;
+
+        SpawnButtons();
     }
 
     private void OnDestroy()
@@ -32,6 +45,22 @@ public class MuslimHeroesManager : SceneManagerBase
         if (notificationRequest.RequestId == this.notificationRequest.RequestId)
         {
             Debug.Log("NAISE");
+        }
+    }
+
+    void SpawnButtons()
+    {
+        _spawnedButton = new List<GameObject>();
+
+        foreach (Transform child in buttonParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var data in MuslimHeroDatabaseSO.muslimHeroDatas)
+        {
+            GameObject clone = Instantiate(muslimHeroBtnPrefab.gameObject, buttonParent);
+            clone.GetComponent<MuslimHeroButtonUI>().Setup(data);
         }
     }
 }

@@ -18,8 +18,12 @@ public class NotificationManager : MonoBehaviour
     [Title("Center Notification")]
     public GameObject centerNotification;
     public TextMeshProUGUI messageHeaderTxt_Center;
+    public Image messageHeaderIconImg_Center;
     public TextMeshProUGUI messageTxt_Center;
-    public Image messageIconImg_Center;
+    public TextMeshProUGUI messageWithImageTxt_Center;
+    public Image messageImageImg;
+    public Transform messageWithImageParent;
+    public Transform messageWithoutImageParent;
 
     [TitleGroup("Data")]
     public List<Sprite> messageIcons;
@@ -133,11 +137,27 @@ public class NotificationManager : MonoBehaviour
     private void ShowCenterNotification(NotificationRequest request, NotificationPreset preset)
     {
         messageHeaderTxt_Center.text = request.headerMessage;
-        messageTxt_Center.text = request.message;
+        messageHeaderIconImg_Center.gameObject.SetActive(request.showHeaderIcon);
+
+        if (request.useImage)
+        {
+            messageWithImageParent.gameObject.SetActive(true);
+            messageWithoutImageParent.gameObject.SetActive(false);
+
+            messageWithImageTxt_Center.text = request.message;
+            messageImageImg.sprite = request.imageSprite;
+        }
+        else
+        {
+            messageWithImageParent.gameObject.SetActive(false);
+            messageWithoutImageParent.gameObject.SetActive(true);
+
+            messageTxt_Center.text = request.message;
+        }           
 
         if (preset.messageIconIndex >= 0 && preset.messageIconIndex < messageIcons.Count)
         {
-            messageIconImg_Center.sprite = messageIcons[preset.messageIconIndex];
+            messageHeaderIconImg_Center.sprite = messageIcons[preset.messageIconIndex];
         }
 
         centerNotification.SetActive(true);
@@ -192,9 +212,15 @@ public struct NotificationRequest
 {
     public string presetId;
     public string headerMessage;
+    public bool showHeaderIcon;
 
     [TextArea(3, 5)]
     public string message;
+   
+    public bool useImage;
+
+    [ShowIf("@useImage")]
+    public Sprite imageSprite;
 
     [ShowInInspector]
     public string RequestId
@@ -205,7 +231,7 @@ public struct NotificationRequest
             {
                 return string.Empty;
             }
-            return headerMessage.ToLower().Replace(" ", "_");
+            return headerMessage.ToLower().Replace(" ", "_").Replace("'", "");
         }
     }
 }
