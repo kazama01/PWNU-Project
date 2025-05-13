@@ -4,15 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using MEC;
+using System;
 
 public class ScratchController : MonoBehaviour
 {
+    /// <summary>
+    /// Float in percent %
+    /// </summary>
+    public event Action<float> OnBlackWhiteRatioCalculated;
+
     public Texture2D originalImage;
     public RawImage originalRawImageComp;
     public RawImage scratchRawImageComp;
     public Material targetMaterial;
 
-    //public int textureSize = 512;
     public int brushSize = 48;
     public Color brushColor = Color.white;
 
@@ -97,7 +102,6 @@ public class ScratchController : MonoBehaviour
 
     private void OnDestroy()
     {
-        Timing.KillCoroutines(DelayedUpdateCoHandle);
     }
 
     void Update()
@@ -132,26 +136,6 @@ public class ScratchController : MonoBehaviour
             CalculateBlackWhiteRatio();
         }
     }
-
-    CoroutineHandle DelayedUpdateCoHandle;
-    IEnumerator<float> DelayedUpdateCo()
-    {
-        while (true)
-        {
-            CalculateBlackWhiteRatio();
-            yield return Timing.WaitForSeconds(0.1f);
-        }
-    }
-
-    //void ClearMask()
-    //{
-    //    Color[] colors = new Color[textureSize * textureSize];
-    //    for (int i = 0; i < colors.Length; i++)
-    //        colors[i] = Color.black;
-
-    //    _generatedMaskTexture.SetPixels(colors);
-    //    _generatedMaskTexture.Apply();
-    //}
 
     void PaintAtUV(Vector2 uv)
     {
@@ -210,6 +194,8 @@ public class ScratchController : MonoBehaviour
 
             //Debug.Log($"Perbandingan Hitam: {blackRatio * 100}%");
             Debug.Log($"Perbandingan Putih: {whiteRatio * 100}%");
+
+            OnBlackWhiteRatioCalculated?.Invoke(whiteRatio * 100);
         }
         else
         {

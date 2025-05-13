@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
-  m_Name: Hasyim Asyari
+  m_Name: Vian
   m_EditorClassIdentifier: 
-  heroName: KH Muhammad Hasyim Asy'ari
-  heroDetail: "Hadratussyekh KH Muhammad Hasyim Asy'ari merupakan tokoh utama pendiri
-    NU.\nPendiri dan pengasuh pertama Pesantren Tebuireng, Jombang\L"
-  heroImage: {fileID: 21300000, guid: d3eea8ee3f1e01b43a09f5b3377a3cdd, type: 3}
+  heroName: Vian
+  heroDetail: Anak unair
+  heroImage: {fileID: 21300000, guid: bb24b52d03775ec4da3535df0803eaad, type: 3}

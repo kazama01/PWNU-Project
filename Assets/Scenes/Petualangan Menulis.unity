@@ -830,6 +830,7 @@ MonoBehaviour:
   useBackButton: 1
   backTargetSceneName: Menu Game
   backButtonPosOverrider: {fileID: 0}
+  showPlayerData: 1
 --- !u!4 &1197657569
 Transform:
   m_ObjectHideFlags: 0

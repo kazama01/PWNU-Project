@@ -166,6 +166,7 @@ MonoBehaviour:
   useBackButton: 1
   backTargetSceneName: Main Menu
   backButtonPosOverrider: {fileID: 0}
+  showPlayerData: 1
 --- !u!1 &352792140
 GameObject:
   m_ObjectHideFlags: 0

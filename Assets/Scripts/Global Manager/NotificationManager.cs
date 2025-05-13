@@ -61,6 +61,11 @@ public class NotificationManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        CloseNotification(NotificationType.Center);
+    }
+
     [TitleGroup("Debug")]
     [Button]
     public void RequestNotification(string header, string message, string presetId = "default")

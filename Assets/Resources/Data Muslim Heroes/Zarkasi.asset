@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afdd1e606900fbf45a6328fa77cb7c14, type: 3}
-  m_Name: Muslim Hero Database SO
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: Zarkasi
   m_EditorClassIdentifier: 
-  muslimHeroDatas:
-  - {fileID: 11400000, guid: 6eab2eaa48810534d9f0f614467a9728, type: 2}
-  - {fileID: 11400000, guid: 36279243c45873347907f0b9ba8bef36, type: 2}
+  heroName: Zarkasi
+  heroDetail: Orang PWNU
+  heroImage: {fileID: 21300000, guid: f26540e2c9c1a60418e858889d73bb12, type: 3}

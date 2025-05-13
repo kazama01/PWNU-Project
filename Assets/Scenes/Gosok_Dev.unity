@@ -332,7 +332,10 @@ MonoBehaviour:
   useBackButton: 1
   backTargetSceneName: Hijaiyah Hunter
   backButtonPosOverrider: {fileID: 0}
+  showPlayerData: 1
   scratchDatabaseSO: {fileID: 11400000, guid: 985a57ad2c4094f4a93553a27b1e19d0, type: 2}
+  winCondition: 95
+  koinReward: 5
 --- !u!4 &651535323
 Transform:
   m_ObjectHideFlags: 0

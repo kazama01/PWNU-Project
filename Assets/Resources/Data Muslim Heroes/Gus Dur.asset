@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
   m_Name: Gus Dur
   m_EditorClassIdentifier: 
-  NotificationRequest:
-    presetId: default
-    headerMessage: Gus Dur
-    showHeaderIcon: 0
-    message: Presiden Indonesia
-    useImage: 1
-    imageSprite: {fileID: 2215141071332379933, guid: d3eea8ee3f1e01b43a09f5b3377a3cdd, type: 3}
+  heroName: Gus Dur
+  heroDetail: Presiden Indonesia ke 4
+  heroImage: {fileID: 21300000, guid: 248bab9465f1b2e4ebdeaa71102d3f00, type: 3}

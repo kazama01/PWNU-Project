@@ -18,26 +18,29 @@ public abstract class SceneManagerBase : MonoBehaviour
     [ShowIf("@useBackButton")]
     public Transform backButtonPosOverrider;
 
+    [TitleGroup("General Scene Setting")]
+    public bool showPlayerData;
+
     protected virtual void Start()
     {
-        Timing.RunCoroutine(ForceSetBackButtonCo().CancelWith(gameObject));
+        Timing.RunCoroutine(StartCo().CancelWith(gameObject));
     }
 
-    IEnumerator<float> ForceSetBackButtonCo()
+    IEnumerator<float> StartCo()
     {
         float elapsed = 0;
 
         while (elapsed < 1)
         {
             SetBackButton();
+            CallPlayerDataUI();
+
             elapsed += Time.deltaTime;
 
             yield return Timing.WaitForOneFrame;
         }
     }
 
-    [TitleGroup("General Scene Setting")]
-    [Button]
     void SetBackButton()
     {
         BackManager.Instance?.ShowBackButton(useBackButton);
@@ -54,5 +57,10 @@ public abstract class SceneManagerBase : MonoBehaviour
         {
             BackManager.Instance?.ResetBackButtonPos();
         }
+    }
+
+    void CallPlayerDataUI()
+    {
+        PlayerDataManager.Instance.ShowKoin(showPlayerData);
     }
 }

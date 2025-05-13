@@ -25,21 +25,6 @@ public class BackManager : MonoBehaviour
         _defaultPos = backButton.transform.position;
     }
 
-    //private void OnEnable()
-    //{
-    //    SceneManager.activeSceneChanged += ActiveSceneChangedHandler;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    SceneManager.activeSceneChanged -= ActiveSceneChangedHandler;
-    //}
-
-    //private void ActiveSceneChangedHandler(Scene previousScene, Scene newScene)
-    //{
-    //    ChangeBackDestinationScene(previousScene.name);
-    //}
-
     public void ChangeBackDestinationScene(string destinationScene)
     {
         targetSceneName = destinationScene;
