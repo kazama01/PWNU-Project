@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Dho
+  m_EditorClassIdentifier: 
+  letter: 14
+  letterImage: {fileID: 0}
+  objects:
+  - objectName: dhouun_cahaya
+    nameImage: {fileID: 2800000, guid: 52e659af780ef2544a9f1e9cd333ba5a, type: 3}
+    objectImage: {fileID: 2800000, guid: 84c001db7d5fdcc4585bb71c35031910, type: 3}
+    audio: {fileID: 0}
+  - objectName: dhirsun_geraham
+    nameImage: {fileID: 2800000, guid: 4540bc5154558fd4b9c883c8fe115975, type: 3}
+    objectImage: {fileID: 2800000, guid: da4bb22ab880fc94fb899f2a7bcc3e39, type: 3}
+    audio: {fileID: 0}
+  - objectName: dhifda_katak
+    nameImage: {fileID: 2800000, guid: f262b103e53aaa547a24c81c041c82c2, type: 3}
+    objectImage: {fileID: 2800000, guid: d725d7bd0a495d74fa3745ced9216adc, type: 3}
+    audio: {fileID: 0}

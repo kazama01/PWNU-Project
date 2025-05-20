@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Dhod
+  m_EditorClassIdentifier: 
+  letter: 16
+  letterImage: {fileID: 0}
+  objects:
+  - objectName: amplop
+    nameImage: {fileID: 2800000, guid: 7181e80d3ee37094a82530f2ab52b254, type: 3}
+    objectImage: {fileID: 2800000, guid: 150c6f8e42dfdd04cb36bef611fdbd12, type: 3}
+    audio: {fileID: 0}
+  - objectName: bayangan
+    nameImage: {fileID: 2800000, guid: 66cb301a86300f64fb568d0294a21a1b, type: 3}
+    objectImage: {fileID: 2800000, guid: 8c371c1f8a7caa541a6fefe970363918, type: 3}
+    audio: {fileID: 0}
+  - objectName: kijang
+    nameImage: {fileID: 2800000, guid: c06a852f05de6e24a8f7567f8c9b3a3c, type: 3}
+    objectImage: {fileID: 2800000, guid: fa026a8e9e93cc14d930eb96c7281371, type: 3}
+    audio: {fileID: 0}

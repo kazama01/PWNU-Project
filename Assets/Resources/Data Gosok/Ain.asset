@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Ain
+  m_EditorClassIdentifier: 
+  letter: 17
+  letterImage: {fileID: 0}
+  objects:
+  - objectName: anggur
+    nameImage: {fileID: 2800000, guid: 25d564fd057423b42ac9dbf8a89131d8, type: 3}
+    objectImage: {fileID: 2800000, guid: d68909ff474ddb64f9cfa5d3856db1e9, type: 3}
+    audio: {fileID: 0}
+  - objectName: burung
+    nameImage: {fileID: 2800000, guid: 3cb717c7cd9e77f429fba9678cbd072b, type: 3}
+    objectImage: {fileID: 2800000, guid: a0bb837dd8802ee4bb1617b99bda41cd, type: 3}
+    audio: {fileID: 0}
+  - objectName: mata
+    nameImage: {fileID: 2800000, guid: 39d25d3709044764e9259ad108f1b7ad, type: 3}
+    objectImage: {fileID: 2800000, guid: e19be62bee51bbf43a7333583f5fba76, type: 3}
+    audio: {fileID: 0}

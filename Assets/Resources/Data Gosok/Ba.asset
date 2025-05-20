@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ba
   m_EditorClassIdentifier: 
   letter: 1
-  letterImage: {fileID: 2800000, guid: 7c771a2821fd4084ea8fc0d206f62190, type: 3}
+  letterImage: {fileID: 2800000, guid: dc695944208b47f45881812cba1648a5, type: 3}
   objects:
   - objectName: babun_pintu
     nameImage: {fileID: 2800000, guid: 66fbd370ddf238940847b669f62bd9f2, type: 3}

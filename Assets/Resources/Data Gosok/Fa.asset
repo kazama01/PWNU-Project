@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Fa
+  m_EditorClassIdentifier: 
+  letter: 19
+  letterImage: {fileID: 0}
+  objects:
+  - objectName: mulut
+    nameImage: {fileID: 2800000, guid: fc746be86be9b95448f313d3d069bfe3, type: 3}
+    objectImage: {fileID: 2800000, guid: c660362e3e688084b951480e0b012cf3, type: 3}
+    audio: {fileID: 0}
+  - objectName: kupu
+    nameImage: {fileID: 2800000, guid: 79ecaf59c1ba81a48b5c84df352951ad, type: 3}
+    objectImage: {fileID: 2800000, guid: ec1527eb58937704eaf20da48763cf2f, type: 3}
+    audio: {fileID: 0}
+  - objectName: gajah
+    nameImage: {fileID: 2800000, guid: 6bd08dd5b20a637488b3bb53db99b3b6, type: 3}
+    objectImage: {fileID: 2800000, guid: 07f526eb71c49b145ad4db41d0ae9c86, type: 3}
+    audio: {fileID: 0}

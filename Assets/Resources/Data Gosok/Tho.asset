@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Tho
+  m_EditorClassIdentifier: 
+  letter: 15
+  letterImage: {fileID: 0}
+  objects:
+  - objectName: thabib_dokter
+    nameImage: {fileID: 2800000, guid: 5feeac80cdfceb54584e63ee7cc32a65, type: 3}
+    objectImage: {fileID: 2800000, guid: 30f16ee343d66e64a995f0c6c4e26add, type: 3}
+    audio: {fileID: 0}
+  - objectName: thowillah_meja
+    nameImage: {fileID: 2800000, guid: 2c61e0293ce3cd64d86bad29aeeac392, type: 3}
+    objectImage: {fileID: 2800000, guid: e053de82d4724684db4a11a42fd594bc, type: 3}
+    audio: {fileID: 0}
+  - objectName: thoiroh_pesawat
+    nameImage: {fileID: 0}
+    objectImage: {fileID: 0}
+    audio: {fileID: 0}
