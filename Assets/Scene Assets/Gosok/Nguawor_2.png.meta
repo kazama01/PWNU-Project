@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nguawor_2_0: -238733402031113560
+      Nguawor_2_1: 7414213251750866815
+      Nguawor_2_10: 5374246833606963151
+      Nguawor_2_11: 5947449335217506357
+      Nguawor_2_12: -6445836776924901244
+      Nguawor_2_13: -898465450147898158
+      Nguawor_2_14: -1471990735696736247
+      Nguawor_2_15: -8021081820507934936
+      Nguawor_2_2: 3743710823678505756
+      Nguawor_2_3: 1687286814341048426
+      Nguawor_2_4: -4956076319435298987
+      Nguawor_2_5: 5567932403324169365
+      Nguawor_2_6: -7366758091554940791
+      Nguawor_2_7: 7074379365525810614
+      Nguawor_2_8: -7105777605709953895
+      Nguawor_2_9: -163696053181124195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
