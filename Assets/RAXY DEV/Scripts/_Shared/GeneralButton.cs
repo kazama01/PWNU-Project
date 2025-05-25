@@ -1,6 +1,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class GeneralButton : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class GeneralButton : MonoBehaviour
             case ButtonFunctionType.None:
                 break;
             case ButtonFunctionType.ChangeScene:
-                SceneManager.LoadScene(_destinationSceneName);
+                GlobalSceneManager.Instance.ChangeScene(_destinationSceneName).Forget();
                 break;
         }
     }
