@@ -12,6 +12,14 @@ public class HijaiyahAudioSceneManager : SceneManagerBase
     
     [Tooltip("Canvas transform where buttons will be spawned")]
     public Transform canvasTransform;
+
+    [Title("Harakat Button Anchors")]
+    [Tooltip("Assign a Transform whose localPosition will dictate the Fathah button's placement.")]
+    public Transform fathahButtonAnchor;
+    [Tooltip("Assign a Transform whose localPosition will dictate the Kasrah button's placement.")]
+    public Transform kasrahButtonAnchor;
+    [Tooltip("Assign a Transform whose localPosition will dictate the Dammah button's placement.")]
+    public Transform dammahButtonAnchor;
     
     [Tooltip("Audio data for each letter")]
     public List<HijaiyahAudioDataSO> allLetterAudioDataList;
@@ -133,28 +141,28 @@ public class HijaiyahAudioSceneManager : SceneManagerBase
     {
         if (letterData == null || audioLetterButtonPrefab == null || canvasTransform == null)
         {
-            Debug.LogError("Missing required components for button creation");
+            Debug.LogError("Missing required components for button creation: letterData, audioLetterButtonPrefab, or canvasTransform.");
+            return;
+        }
+
+        if (fathahButtonAnchor == null || kasrahButtonAnchor == null || dammahButtonAnchor == null)
+        {
+            Debug.LogError("One or more Harakat button anchors (fathahButtonAnchor, kasrahButtonAnchor, dammahButtonAnchor) are not assigned in the Inspector.");
             return;
         }
         
-        // Define positions for the 3 buttons
-        Vector3[] buttonPositions = new Vector3[] 
-        { 
-            new Vector3(-250, 0, 0),  // Fathah position (left)
-            new Vector3(0, 0, 0),     // Kasrah position (center)
-            new Vector3(250, 0, 0)    // Dammah position (right)
-        };
-        
-        // Create all three harakat buttons
-        CreateHarakatButton(letterData, HarakatType.Fathah, buttonPositions[0]);
-        CreateHarakatButton(letterData, HarakatType.Kasrah, buttonPositions[1]);
-        CreateHarakatButton(letterData, HarakatType.Dammah, buttonPositions[2]);
+        // Create all three harakat buttons using the world positions from the assigned anchors
+        CreateHarakatButton(letterData, HarakatType.Fathah, fathahButtonAnchor.position);
+        CreateHarakatButton(letterData, HarakatType.Kasrah, kasrahButtonAnchor.position);
+        CreateHarakatButton(letterData, HarakatType.Dammah, dammahButtonAnchor.position);
     }
     
-    private void CreateHarakatButton(HijaiyahAudioDataSO letterData, HarakatType harakatType, Vector3 position)
+    private void CreateHarakatButton(HijaiyahAudioDataSO letterData, HarakatType harakatType, Vector3 worldPosition)
     {
         var button = Instantiate(audioLetterButtonPrefab.gameObject, canvasTransform);
-        button.GetComponent<RectTransform>().anchoredPosition = position;
+        // Set the button's world position to match the anchor's world position.
+        // This aligns the pivot of the button with the pivot of the anchor GameObject.
+        button.transform.position = worldPosition;
         
         var buttonUI = button.GetComponent<AudioLetterButtonUI>();
         buttonUI.SetupWithExplicitHarakat(letterData.letter, letterData, harakatType);
