@@ -6,28 +6,28 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/RAXY DEV/Scenes/Main Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Menu Game.unity
+    path: Assets/RAXY DEV/Scenes/Menu Game.unity
     guid: e8c3f2f34d39f79468ab8acb737cc389
   - enabled: 1
-    path: Assets/Scenes/Petualangan Menulis.unity
+    path: Assets/RAXY DEV/Scenes/Petualangan Menulis.unity
     guid: d049dfb55630e21468ea48e2d8592355
   - enabled: 1
-    path: Assets/Scenes/Hijaiyah Hunter.unity
+    path: Assets/RAXY DEV/Scenes/Hijaiyah Hunter.unity
     guid: e21b3d1028c627d4d8daef542f674a24
   - enabled: 1
-    path: Assets/Scenes/Gosok_Dev.unity
+    path: Assets/RAXY DEV/Scenes/Gosok_Dev.unity
     guid: 3b74a6293be298a48b6d3ee71557b743
   - enabled: 1
-    path: Assets/Scenes/Harokat.unity
+    path: Assets/RAXY DEV/Scenes/Harokat.unity
     guid: 57ee6df6021ca0b4d92eb2dbf9a7ab97
   - enabled: 1
-    path: Assets/Scenes/Muslim Heroes.unity
+    path: Assets/RAXY DEV/Scenes/Muslim Heroes.unity
     guid: f2ca069add6d859418493f7ea5560bb6
   - enabled: 1
-    path: Assets/Scenes/Tebak Tokoh.unity
+    path: Assets/RAXY DEV/Scenes/Tebak Tokoh.unity
     guid: 02e7c87446f8d2044bdeb44db9787976
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
