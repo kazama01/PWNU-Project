@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ha
   m_EditorClassIdentifier: 
   letter: 26
-  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  letterImage: {fileID: 21300000, guid: 082c756f7e2f2c640abfb36cfa14745d, type: 3}
   objects:
   - objectName: hadiah
     nameImage: {fileID: 2800000, guid: d48b20536ed47134c8a1c474adf9eff3, type: 3}

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: a34587fcdb1aae64b86385274c778985
+guid: 26b6fd75253ccb6489fe9cb3066c9e14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 111122470432037815
-    second: TINNINUN NAGA_0
+      213: -4202520748559440284
+    second: UDZUNUN TELINGA_0
   - first:
-      213: 7220121389553957040
-    second: TINNINUN NAGA_1
+      213: 2829260687577299939
+    second: UDZUNUN TELINGA_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -80,7 +80,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 3
     compressionQuality: 100
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TINNINUN NAGA_0
+      name: UDZUNUN TELINGA_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 113
-        width: 290
-        height: 228
+        x: 209
+        y: 241
+        width: 280
+        height: 339
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb5aa05c49ca8100800000000000000
-      internalID: 111122470432037815
+      spriteID: 466e7e425a5ada5c0800000000000000
+      internalID: -4202520748559440284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TINNINUN NAGA_1
+      name: UDZUNUN TELINGA_1
       rect:
         serializedVersion: 2
-        x: 521
-        y: 145
-        width: 333
-        height: 154
+        x: 491
+        y: 296
+        width: 452
+        height: 186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b830936626033460800000000000000
-      internalID: 7220121389553957040
+      spriteID: 3ebb504fa9d834720800000000000000
+      internalID: 2829260687577299939
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TINNINUN NAGA_0: 111122470432037815
-      TINNINUN NAGA_1: 7220121389553957040
+      UDZUNUN TELINGA_0: -4202520748559440284
+      UDZUNUN TELINGA_1: 2829260687577299939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

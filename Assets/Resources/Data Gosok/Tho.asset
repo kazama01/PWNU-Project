@@ -24,6 +24,6 @@ MonoBehaviour:
     objectImage: {fileID: 2800000, guid: e053de82d4724684db4a11a42fd594bc, type: 3}
     audio: {fileID: 0}
   - objectName: thoiroh_pesawat
-    nameImage: {fileID: 0}
-    objectImage: {fileID: 0}
+    nameImage: {fileID: 2800000, guid: 2f38f086206efda49832f7757fa864ab, type: 3}
+    objectImage: {fileID: 2800000, guid: 62028ebf20727aa46958d7e28305877e, type: 3}
     audio: {fileID: 0}

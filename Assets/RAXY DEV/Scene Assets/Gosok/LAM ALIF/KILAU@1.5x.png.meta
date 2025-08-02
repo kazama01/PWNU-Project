@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: a34587fcdb1aae64b86385274c778985
+guid: 6c4667efaaad4124ab8b72211bcd76c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 111122470432037815
-    second: TINNINUN NAGA_0
+      213: -3504890305447340563
+    second: KILAU@1.5x_0
   - first:
-      213: 7220121389553957040
-    second: TINNINUN NAGA_1
+      213: -4685731764579865946
+    second: KILAU@1.5x_1
+  - first:
+      213: 1198628399146459462
+    second: KILAU@1.5x_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 3
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TINNINUN NAGA_0
+      name: KILAU@1.5x_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 113
-        width: 290
-        height: 228
+        x: 157
+        y: 686
+        width: 589
+        height: 615
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb5aa05c49ca8100800000000000000
-      internalID: 111122470432037815
+      spriteID: de5d91f36d02c5fc0800000000000000
+      internalID: -3504890305447340563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TINNINUN NAGA_1
+      name: KILAU@1.5x_1
       rect:
         serializedVersion: 2
-        x: 521
-        y: 145
-        width: 333
-        height: 154
+        x: 565
+        y: 187
+        width: 650
+        height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +156,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b830936626033460800000000000000
-      internalID: 7220121389553957040
+      spriteID: 6aae37349cfe8feb0800000000000000
+      internalID: -4685731764579865946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KILAU@1.5x_2
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 675
+        width: 579
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641e1dcad2262a010800000000000000
+      internalID: 1198628399146459462
       vertices: []
       indices: 
       edges: []
@@ -173,8 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TINNINUN NAGA_0: 111122470432037815
-      TINNINUN NAGA_1: 7220121389553957040
+      KILAU@1.5x_0: -3504890305447340563
+      KILAU@1.5x_1: -4685731764579865946
+      KILAU@1.5x_2: 1198628399146459462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

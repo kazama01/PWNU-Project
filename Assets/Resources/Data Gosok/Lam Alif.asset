@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
   m_Name: Lam Alif
   m_EditorClassIdentifier: 
-  letter: 0
-  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  letter: 27
+  letterImage: {fileID: 21300000, guid: 6f2852cfbab179a4d86c0cba340bbb8c, type: 3}
   objects:
-  - objectName: asadun_singa
-    nameImage: {fileID: 2800000, guid: b823d6de6a0ad414d8e743f2540ea5e3, type: 3}
-    objectImage: {fileID: 2800000, guid: f26540e2c9c1a60418e858889d73bb12, type: 3}
+  - objectName: laibun_pemain
+    nameImage: {fileID: 2800000, guid: c8fa43953dc9eab4c96ddc8a8be56f20, type: 3}
+    objectImage: {fileID: 2800000, guid: abb531c8dd5771045bc605a0b55e6077, type: 3}
     audio: {fileID: 0}
-  - objectName: arnabun_kelinci
-    nameImage: {fileID: 2800000, guid: f37d1a71f1f01064eb6f7beb13c17bb7, type: 3}
-    objectImage: {fileID: 2800000, guid: 248bab9465f1b2e4ebdeaa71102d3f00, type: 3}
+  - objectName: lamiun_berkilau
+    nameImage: {fileID: 2800000, guid: 2c9940f7fa829c543b90e712fc374bc2, type: 3}
+    objectImage: {fileID: 2800000, guid: 6c4667efaaad4124ab8b72211bcd76c2, type: 3}
+    audio: {fileID: 0}
+  - objectName: lazimun_penting
+    nameImage: {fileID: 2800000, guid: ee78a4000ccbcb74dab81bc39bdcf4c6, type: 3}
+    objectImage: {fileID: 2800000, guid: 6bda1a837295c6d40aa326ec5cc862d1, type: 3}
     audio: {fileID: 0}

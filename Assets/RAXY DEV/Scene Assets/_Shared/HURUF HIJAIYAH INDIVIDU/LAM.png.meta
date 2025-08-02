@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a34587fcdb1aae64b86385274c778985
+guid: f9dbe839e58f4f44984bd69f6134b875
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 111122470432037815
-    second: TINNINUN NAGA_0
-  - first:
-      213: 7220121389553957040
-    second: TINNINUN NAGA_1
+      213: 5033788161387477872
+    second: LAM_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TINNINUN NAGA_0
+      name: LAM_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 113
-        width: 290
-        height: 228
+        x: 167
+        y: 30
+        width: 696
+        height: 956
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb5aa05c49ca8100800000000000000
-      internalID: 111122470432037815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TINNINUN NAGA_1
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 145
-        width: 333
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b830936626033460800000000000000
-      internalID: 7220121389553957040
+      spriteID: 07b3112a9ab9bd540800000000000000
+      internalID: 5033788161387477872
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TINNINUN NAGA_0: 111122470432037815
-      TINNINUN NAGA_1: 7220121389553957040
+      LAM_0: 5033788161387477872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

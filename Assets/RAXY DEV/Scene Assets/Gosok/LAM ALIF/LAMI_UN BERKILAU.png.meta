@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: a34587fcdb1aae64b86385274c778985
+guid: 2c9940f7fa829c543b90e712fc374bc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 111122470432037815
-    second: TINNINUN NAGA_0
+      213: 1641464798654397567
+    second: LAMI_UN BERKILAU_0
   - first:
-      213: 7220121389553957040
-    second: TINNINUN NAGA_1
+      213: -58052572276094907
+    second: LAMI_UN BERKILAU_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 3
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TINNINUN NAGA_0
+      name: LAMI_UN BERKILAU_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 113
-        width: 290
-        height: 228
+        x: 143
+        y: 230
+        width: 348
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb5aa05c49ca8100800000000000000
-      internalID: 111122470432037815
+      spriteID: f7c7a1b9987a7c610800000000000000
+      internalID: 1641464798654397567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TINNINUN NAGA_1
+      name: LAMI_UN BERKILAU_1
       rect:
         serializedVersion: 2
-        x: 521
-        y: 145
-        width: 333
-        height: 154
+        x: 491
+        y: 303
+        width: 488
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b830936626033460800000000000000
-      internalID: 7220121389553957040
+      spriteID: 5488f2b3e71c13ff0800000000000000
+      internalID: -58052572276094907
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TINNINUN NAGA_0: 111122470432037815
-      TINNINUN NAGA_1: 7220121389553957040
+      LAMI_UN BERKILAU_0: 1641464798654397567
+      LAMI_UN BERKILAU_1: -58052572276094907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
