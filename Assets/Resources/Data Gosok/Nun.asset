@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Nun
+  m_EditorClassIdentifier: 
+  letter: 24
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: macan tutul
+    nameImage: {fileID: 2800000, guid: 485fc802222a8ba4c89f7810208a8501, type: 3}
+    objectImage: {fileID: 2800000, guid: 1a8742a73fd317e41a8b6767de9fec98, type: 3}
+    audio: {fileID: 0}
+  - objectName: api
+    nameImage: {fileID: 2800000, guid: d231a3265f4d1e24eb6ee94374ee721e, type: 3}
+    objectImage: {fileID: 2800000, guid: 0c62786f85856cf4d883c0c1761a2183, type: 3}
+    audio: {fileID: 0}
+  - objectName: lebah
+    nameImage: {fileID: 2800000, guid: ca29f300aa845f44497d9d5f25905039, type: 3}
+    objectImage: {fileID: 2800000, guid: 242edb3e021d013478fcea386076b385, type: 3}
+    audio: {fileID: 0}

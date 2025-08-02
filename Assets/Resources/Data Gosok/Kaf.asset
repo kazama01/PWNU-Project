@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Kaf
+  m_EditorClassIdentifier: 
+  letter: 21
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: anjing
+    nameImage: {fileID: 2800000, guid: ec47dd1762156474a9ea1c250ba0a9d7, type: 3}
+    objectImage: {fileID: 2800000, guid: 383885e0d75831943b09d8002819814c, type: 3}
+    audio: {fileID: 0}
+  - objectName: buku
+    nameImage: {fileID: 2800000, guid: 68a4efc707645604e83e66705ee5131b, type: 3}
+    objectImage: {fileID: 2800000, guid: 6f64821d6eeda3b49bdacdc7b4033499, type: 3}
+    audio: {fileID: 0}
+  - objectName: bola
+    nameImage: {fileID: 2800000, guid: 7e6d795a1336dc64cae1a9265604238c, type: 3}
+    objectImage: {fileID: 2800000, guid: f732f971d25397848a6afea57d53c1b4, type: 3}
+    audio: {fileID: 0}

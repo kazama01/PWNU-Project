@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Waw
+  m_EditorClassIdentifier: 
+  letter: 25
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: kertas
+    nameImage: {fileID: 2800000, guid: 5d2ff1e99dcf009449fbc3dc0092750f, type: 3}
+    objectImage: {fileID: 2800000, guid: ef87d5d54a965d249a62cbe60c5dc43d, type: 3}
+    audio: {fileID: 0}
+  - objectName: timbangan
+    nameImage: {fileID: 2800000, guid: 8c2b6db04efcdd64b9a71218603befb8, type: 3}
+    objectImage: {fileID: 2800000, guid: 9c72821dd73b31845b3467ea47f3d779, type: 3}
+    audio: {fileID: 0}
+  - objectName: mawar
+    nameImage: {fileID: 2800000, guid: a1542ee0d37e9674db617d2c1da58775, type: 3}
+    objectImage: {fileID: 2800000, guid: fc8183885e372d847b01bbba8dfec927, type: 3}
+    audio: {fileID: 0}

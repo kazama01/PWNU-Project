@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Ya
+  m_EditorClassIdentifier: 
+  letter: 29
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: burung tekukur
+    nameImage: {fileID: 2800000, guid: 806e18dc1ccb1004e85b7de78cdbf626, type: 3}
+    objectImage: {fileID: 2800000, guid: 7b011c44ac4e2d547ab161bbc929f4ce, type: 3}
+    audio: {fileID: 0}
+  - objectName: tangan
+    nameImage: {fileID: 2800000, guid: f057798df2fa1b04c947636f0c9138bb, type: 3}
+    objectImage: {fileID: 2800000, guid: 65e30f760ef404c41803b5a2857e1791, type: 3}
+    audio: {fileID: 0}
+  - objectName: kapal pesiar
+    nameImage: {fileID: 2800000, guid: 645b3f9810ad65347a5fed950f46c4f9, type: 3}
+    objectImage: {fileID: 2800000, guid: 2a8af5592c7130947a69de03d678bdae, type: 3}
+    audio: {fileID: 0}
