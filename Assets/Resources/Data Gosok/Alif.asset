@@ -15,11 +15,11 @@ MonoBehaviour:
   letter: 0
   letterImage: {fileID: 21300000, guid: b100832379d9c8d4e9ff950d8ef9948c, type: 3}
   objects:
-  - objectName: asadun_singa
-    nameImage: {fileID: 2800000, guid: b823d6de6a0ad414d8e743f2540ea5e3, type: 3}
-    objectImage: {fileID: 2800000, guid: f26540e2c9c1a60418e858889d73bb12, type: 3}
+  - objectName: ibrah_jarum
+    nameImage: {fileID: 2800000, guid: 2db9b7eb1d1711149a4c1c5687aa0ba7, type: 3}
+    objectImage: {fileID: 2800000, guid: ffec39dae035aa7408f8e1f6a6c4cbdc, type: 3}
     audio: {fileID: 0}
   - objectName: arnabun_kelinci
-    nameImage: {fileID: 2800000, guid: f37d1a71f1f01064eb6f7beb13c17bb7, type: 3}
-    objectImage: {fileID: 2800000, guid: 248bab9465f1b2e4ebdeaa71102d3f00, type: 3}
+    nameImage: {fileID: 2800000, guid: 54d9db3ef1a96754d913997ee49077f5, type: 3}
+    objectImage: {fileID: 2800000, guid: 16505e8cf89bc954ca747ff60745ce8d, type: 3}
     audio: {fileID: 0}
