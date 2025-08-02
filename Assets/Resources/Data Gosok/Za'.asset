@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
   m_Name: Za'
   m_EditorClassIdentifier: 
-  letter: 23
-  letterImage: {fileID: 21300000, guid: db14e6ad1cfae28438c917d001a8245f, type: 3}
+  letter: 10
+  letterImage: {fileID: 21300000, guid: d6a275576f23cd9478372c541bc611ac, type: 3}
   objects:
-  - objectName: air
-    nameImage: {fileID: 2800000, guid: be9321283b02e914a9db1ef41e3087d1, type: 3}
-    objectImage: {fileID: 2800000, guid: 26fac82b6153f054c84ce108b644a31b, type: 3}
+  - objectName: zahrun_bunga
+    nameImage: {fileID: 2800000, guid: b7f33f71736965c458e116a4e5c207f2, type: 3}
+    objectImage: {fileID: 2800000, guid: 9c9fa967384d22942a864b48e149633c, type: 3}
     audio: {fileID: 0}
-  - objectName: pisang
-    nameImage: {fileID: 2800000, guid: 00f3f31cedb17a844a59aa2cb11c27b5, type: 3}
-    objectImage: {fileID: 2800000, guid: 8759377af005bff4e97f88a1935a85cb, type: 3}
+  - objectName: zarofatun_jerapah
+    nameImage: {fileID: 2800000, guid: 4dcb6f5dcf930f448b9298d7354b9281, type: 3}
+    objectImage: {fileID: 2800000, guid: 4bbf639c5b011b64a912e498dd2265e0, type: 3}
     audio: {fileID: 0}
-  - objectName: sendok
-    nameImage: {fileID: 2800000, guid: be232a99bcbf3cc438d2ce86be72c7b2, type: 3}
-    objectImage: {fileID: 2800000, guid: 699b09b58e23c734ea90fabf2739f841, type: 3}
+  - objectName: zaitunun_zaitun
+    nameImage: {fileID: 2800000, guid: 6c444cea18a5fda4a9a63bf7767beb6b, type: 3}
+    objectImage: {fileID: 2800000, guid: 36c9d3fe81c8dcf4da26e853f22c7f57, type: 3}
     audio: {fileID: 0}
