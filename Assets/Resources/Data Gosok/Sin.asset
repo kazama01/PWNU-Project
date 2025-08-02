@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Sin
+  m_EditorClassIdentifier: 
+  letter: 11
+  letterImage: {fileID: 21300000, guid: 0f206089aef067f44b34109a475f842a, type: 3}
+  objects:
+  - objectName: samakun_ikan
+    nameImage: {fileID: 2800000, guid: 2d056f182baf1f04786e0a49f2f12a66, type: 3}
+    objectImage: {fileID: 2800000, guid: 1f17b5196fb17ee42982c7089283cecd, type: 3}
+    audio: {fileID: 0}
+  - objectName: sayyarotun_mobil
+    nameImage: {fileID: 2800000, guid: ba39bfbf867667f41a39356f753a1716, type: 3}
+    objectImage: {fileID: 2800000, guid: 891569cfcebb79249b9e5122184ed102, type: 3}
+    audio: {fileID: 0}
+  - objectName: saisun_pedang
+    nameImage: {fileID: 2800000, guid: 488f21b10b2e45e4987e5f3ffdf7c189, type: 3}
+    objectImage: {fileID: 2800000, guid: 40d57d4ee18c0fb40baa32abf247acb9, type: 3}
+    audio: {fileID: 0}

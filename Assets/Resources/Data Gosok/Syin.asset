@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Syin
+  m_EditorClassIdentifier: 
+  letter: 12
+  letterImage: {fileID: 21300000, guid: 2a7965c4c63c552428abe124ecaadef1, type: 3}
+  objects:
+  - objectName: sam_atub_lilin
+    nameImage: {fileID: 2800000, guid: d4347044ca8d03b49864b4a2d15687b6, type: 3}
+    objectImage: {fileID: 2800000, guid: 22c1cf5dfdc72014ea194367528a21d0, type: 3}
+    audio: {fileID: 0}
+  - objectName: samsun_matahari
+    nameImage: {fileID: 2800000, guid: 83f6b8dbaecd3f240b7bba5dbe30a122, type: 3}
+    objectImage: {fileID: 2800000, guid: 45d87cab2e2af8c4daffb04f462744ce, type: 3}
+    audio: {fileID: 0}
+  - objectName: sajarotun_pohon
+    nameImage: {fileID: 2800000, guid: 9cce3b6511b7a1147b6a6ab2c917b168, type: 3}
+    objectImage: {fileID: 2800000, guid: 978b8625d50cc674998873542747acf9, type: 3}
+    audio: {fileID: 0}

@@ -15,15 +15,15 @@ MonoBehaviour:
   letter: 20
   letterImage: {fileID: 21300000, guid: eb8815a8415cb6949a0af4cdda58e93f, type: 3}
   objects:
-  - objectName: monyet
+  - objectName: qird_monyet
     nameImage: {fileID: 2800000, guid: 133367718db6a7049bf5b0a84d55fd89, type: 3}
     objectImage: {fileID: 2800000, guid: 9921590ccfb50cd48b2ffc400b7339d2, type: 3}
     audio: {fileID: 0}
-  - objectName: pena
+  - objectName: qalam_pena
     nameImage: {fileID: 2800000, guid: d33dbf98a53a98448935fc31a2d2e595, type: 3}
     objectImage: {fileID: 2800000, guid: c0028c38afb5036469eb5171cc04bba7, type: 3}
     audio: {fileID: 0}
-  - objectName: perahu
+  - objectName: qarib_perahu
     nameImage: {fileID: 2800000, guid: f0d115d22f916d84193c020eaacfbf3e, type: 3}
     objectImage: {fileID: 2800000, guid: 517c57cc636ed9a49a4221af5c0852a9, type: 3}
     audio: {fileID: 0}

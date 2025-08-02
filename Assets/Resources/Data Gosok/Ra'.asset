@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Ra'
+  m_EditorClassIdentifier: 
+  letter: 9
+  letterImage: {fileID: 21300000, guid: 8413790c77045e146b7ae6b2d00f2f28, type: 3}
+  objects:
+  - objectName: rummanun_delima
+    nameImage: {fileID: 2800000, guid: 307fbbf948975454b8df1c4d58e7ccf5, type: 3}
+    objectImage: {fileID: 2800000, guid: 8acfea457c7ecb64a855e7d144ef51c2, type: 3}
+    audio: {fileID: 0}
+  - objectName: ro_sun_kepala
+    nameImage: {fileID: 2800000, guid: a7a4b906b49b9934586c808b2d567a81, type: 3}
+    objectImage: {fileID: 2800000, guid: eb52afc800080094b8aa1cdd27360a1d, type: 3}
+    audio: {fileID: 0}
+  - objectName: rojulun_laki_laki
+    nameImage: {fileID: 2800000, guid: f37cb5b6e53ce6a4a80f167dd8c93d46, type: 3}
+    objectImage: {fileID: 2800000, guid: cd2190cc45a23064d80c3321c6c27124, type: 3}
+    audio: {fileID: 0}

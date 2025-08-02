@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Dzal
+  m_EditorClassIdentifier: 
+  letter: 8
+  letterImage: {fileID: 21300000, guid: 1007e6d12b953024099cec6ba81079ea, type: 3}
+  objects:
+  - objectName: dzahabun_emas
+    nameImage: {fileID: 2800000, guid: a1988baeec91dd54ba7734c4696ece81, type: 3}
+    objectImage: {fileID: 2800000, guid: 927aed0e1f23fd4489526b31aaf5c2ea, type: 3}
+    audio: {fileID: 0}
+  - objectName: dziro_un_lengan
+    nameImage: {fileID: 2800000, guid: 2a2568c70282e854394ed87f21b55eeb, type: 3}
+    objectImage: {fileID: 2800000, guid: 32291380783b3574cb87f1dc8a523fb2, type: 3}
+    audio: {fileID: 0}
+  - objectName: dzi_bun_serigala
+    nameImage: {fileID: 2800000, guid: 4bcb31beac99b1d4fbdb3e541dd8fb60, type: 3}
+    objectImage: {fileID: 2800000, guid: f01fd85149d0a8d4d9fe007163575b0f, type: 3}
+    audio: {fileID: 0}

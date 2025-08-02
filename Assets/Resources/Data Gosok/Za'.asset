@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Za'
+  m_EditorClassIdentifier: 
+  letter: 23
+  letterImage: {fileID: 21300000, guid: db14e6ad1cfae28438c917d001a8245f, type: 3}
+  objects:
+  - objectName: air
+    nameImage: {fileID: 2800000, guid: be9321283b02e914a9db1ef41e3087d1, type: 3}
+    objectImage: {fileID: 2800000, guid: 26fac82b6153f054c84ce108b644a31b, type: 3}
+    audio: {fileID: 0}
+  - objectName: pisang
+    nameImage: {fileID: 2800000, guid: 00f3f31cedb17a844a59aa2cb11c27b5, type: 3}
+    objectImage: {fileID: 2800000, guid: 8759377af005bff4e97f88a1935a85cb, type: 3}
+    audio: {fileID: 0}
+  - objectName: sendok
+    nameImage: {fileID: 2800000, guid: be232a99bcbf3cc438d2ce86be72c7b2, type: 3}
+    objectImage: {fileID: 2800000, guid: 699b09b58e23c734ea90fabf2739f841, type: 3}
+    audio: {fileID: 0}
