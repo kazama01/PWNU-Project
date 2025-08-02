@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Lam
+  m_EditorClassIdentifier: 
+  letter: 22
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: susu
+    nameImage: {fileID: 2800000, guid: 952b0cc87d31a174fbefad97bc90aad6, type: 3}
+    objectImage: {fileID: 2800000, guid: 017da6808bacdc64aae41cf5fc913fb3, type: 3}
+    audio: {fileID: 0}
+  - objectName: lemon
+    nameImage: {fileID: 2800000, guid: 4a3f24f0266945944bb432380a27358b, type: 3}
+    objectImage: {fileID: 2800000, guid: ddef12e1b362ee84f9bfbdc665627ff6, type: 3}
+    audio: {fileID: 0}
+  - objectName: lidah
+    nameImage: {fileID: 2800000, guid: 1a0e997e79e69574dac6c3ac67733868, type: 3}
+    objectImage: {fileID: 2800000, guid: 72559037f66e4f0488b59c2c4ff65f34, type: 3}
+    audio: {fileID: 0}

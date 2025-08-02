@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Hamzah
+  m_EditorClassIdentifier: 
+  letter: 0
+  letterImage: {fileID: 2800000, guid: 680126b7877ceaa4dbddeecf872e4134, type: 3}
+  objects:
+  - objectName: asadun_singa
+    nameImage: {fileID: 2800000, guid: b823d6de6a0ad414d8e743f2540ea5e3, type: 3}
+    objectImage: {fileID: 2800000, guid: f26540e2c9c1a60418e858889d73bb12, type: 3}
+    audio: {fileID: 0}
+  - objectName: arnabun_kelinci
+    nameImage: {fileID: 2800000, guid: f37d1a71f1f01064eb6f7beb13c17bb7, type: 3}
+    objectImage: {fileID: 2800000, guid: 248bab9465f1b2e4ebdeaa71102d3f00, type: 3}
+    audio: {fileID: 0}
