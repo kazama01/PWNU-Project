@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a195c3d18306d49832ec7b97ff72d1, type: 3}
+  m_Name: Dal
+  m_EditorClassIdentifier: 
+  letter: 7
+  letterImage: {fileID: 21300000, guid: c97bfa0cabcd1b546adaf518a8717ee6, type: 3}
+  objects:
+  - objectName: dalwun_ember
+    nameImage: {fileID: 2800000, guid: d6e1e8c0003c7fa4ab3eda16acff2b1a, type: 3}
+    objectImage: {fileID: 2800000, guid: 6b27babf2b9aa144da7dd30a78cda67e, type: 3}
+    audio: {fileID: 0}
+  - objectName: dajajatun_ayamBetina
+    nameImage: {fileID: 2800000, guid: 44fd7806bf461b142900a719a1a013f8, type: 3}
+    objectImage: {fileID: 2800000, guid: 78434e70e658eaa4d94765984a0c0938, type: 3}
+    audio: {fileID: 0}
+  - objectName: dikun_ayamJantan
+    nameImage: {fileID: 2800000, guid: 5a955669bf3b48a4cac41a1fb2981767, type: 3}
+    objectImage: {fileID: 2800000, guid: e111a2b17a7586940809c4f116b1a876, type: 3}
+    audio: {fileID: 0}
