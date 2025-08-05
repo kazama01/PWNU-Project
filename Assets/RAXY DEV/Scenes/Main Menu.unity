@@ -506,11 +506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 403.645
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 65
+      value: 134.785
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -568,6 +568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mode Guru Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7266756308751006501, guid: ff80848e0681fc64aa12464e05bdd982, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -850,11 +858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 400.228
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 65
+      value: 144.455
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -912,6 +920,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metode Mengaji Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1661920059909414888, guid: e66777ffa2348494d8c21dad0a50f58e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1724,11 +1740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 344.518
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 65
+      value: 124.348
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1785,6 +1801,18 @@ PrefabInstance:
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
       value: Petualangan Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7482488599947737938, guid: 7dc5d14ba9df29b4c9ca82b0a948334a, type: 3}
+    - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_IsActive
