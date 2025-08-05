@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 22c7107a9e101794fb6f6a6ecf5764df
+guid: 35b5b7f84ea5695479b34062ac668751
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6027708775892311235
-    second: HAROKAT SEEKER_0
+      213: 8291230186154972340
+    second: 0d86c64fccbfdefd96e07768f3e932db_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HAROKAT SEEKER_0
+      name: 0d86c64fccbfdefd96e07768f3e932db_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 511
-        height: 313
+        width: 736
+        height: 676
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ccd09c0239b6a350800000000000000
-      internalID: 6027708775892311235
+      spriteID: 4b453cceced501370800000000000000
+      internalID: 8291230186154972340
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      HAROKAT SEEKER_0: 6027708775892311235
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

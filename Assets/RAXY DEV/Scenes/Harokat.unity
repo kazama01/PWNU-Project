@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useBackButton: 1
-  backTargetSceneName: Petualangan Menulis
+  backTargetSceneName: Menu Game
   backButtonPosOverrider: {fileID: 0}
   showPlayerData: 1
   audioLetterButtonPrefab: {fileID: 364267922973618588, guid: 5e6df6a7d5281c848b6cc623a1aa7115, type: 3}

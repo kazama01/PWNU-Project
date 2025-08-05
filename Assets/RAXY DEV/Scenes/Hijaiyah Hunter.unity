@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useBackButton: 1
-  backTargetSceneName: Petualangan Menulis
+  backTargetSceneName: Menu Game
   backButtonPosOverrider: {fileID: 0}
   showPlayerData: 1
   scratchDatabaseSO: {fileID: 11400000, guid: 985a57ad2c4094f4a93553a27b1e19d0, type: 2}
