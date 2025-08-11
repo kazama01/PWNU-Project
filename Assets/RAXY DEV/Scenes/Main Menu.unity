@@ -1423,53 +1423,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8291230186154972340, guid: 35b5b7f84ea5695479b34062ac668751, type: 3}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014084800663339233, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5344795849246664902, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
       propertyPath: m_Name
       value: Global Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6692830298497870563, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6692830298497870563, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 781107978038769155, guid: 6c606f1a13e9aaa47b7cb3be6a023d93, type: 3}
-    - target: {fileID: 6692830298497870563, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440392280065413134, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8731074650956584726, guid: 7c2199f406efce649b05325cbf4fa4b6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
