@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 35b5b7f84ea5695479b34062ac668751
+guid: 845c84885e1553f4082be616277384ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8291230186154972340
-    second: 0d86c64fccbfdefd96e07768f3e932db_0
+      213: 1545968166300829919
+    second: PAPAN UI 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 0d86c64fccbfdefd96e07768f3e932db_0
+      name: PAPAN UI 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 736
-        height: 676
+        width: 1021
+        height: 1235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b453cceced501370800000000000000
-      internalID: 8291230186154972340
+      spriteID: fd84c6a3bd1647510800000000000000
+      internalID: 1545968166300829919
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      0d86c64fccbfdefd96e07768f3e932db_0: 8291230186154972340
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

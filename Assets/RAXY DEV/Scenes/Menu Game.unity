@@ -197,8 +197,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1209345461152887960}
-  - {fileID: 599287686}
   - {fileID: 667656130}
+  - {fileID: 599287686}
   m_Father: {fileID: 1969482542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -365,14 +365,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 352792141}
     m_Modifications:
-    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
-      propertyPath: buttonType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
-      propertyPath: _destinationSceneName
-      value: Harokat
-      objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -399,11 +391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 290.2537
+      value: 337.46
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 177.7871
+      value: 206.702
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,11 +427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -16.7676
+      value: -12.671
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: -233.239
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -471,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
-      value: Harokat Seeker Button
+      value: Doa & Sholawat Button
       objectReference: {fileID: 0}
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Type
@@ -481,10 +473,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6027708775892311235, guid: 22c7107a9e101794fb6f6a6ecf5764df, type: 3}
-    - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -850,11 +838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 278.3894
+      value: 323.666
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 165.3482
+      value: 192.24
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -886,11 +874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.8691516
+      value: 0.000011206
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -183
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -963,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1255695117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1220,7 +1208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5636574727326850100, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: _destinationSceneName
-      value: Hijaiyah Hunter
+      value: Petualangan Menulis
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Pivot.x
@@ -1248,11 +1236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 329.7081
+      value: 383.331
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 209.9218
+      value: 244.063
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1284,11 +1272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 31.9758
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 263
+      value: 276
       objectReference: {fileID: 0}
     - target: {fileID: 907828123987429078, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1316,7 +1304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
-      value: Hijaiyah Hunter Button
+      value: Petualangan Menulis Button
       objectReference: {fileID: 0}
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Type
