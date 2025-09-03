@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d61b93e79395c48b79e213d6602f15, type: 3}
+  m_Name: Ba
+  m_EditorClassIdentifier: 
+  letter: 1
+  letterSprite: {fileID: 21300000, guid: 96458348cde3cf444a7a49065b9835c1, type: 3}
+  prefixPronounciation: b
+  fathahAudio: {fileID: 8300000, guid: 39c2ba64f3cd1ab40aa2552f273e7515, type: 3}
+  kasrahAudio: {fileID: 8300000, guid: 7acdb051e2d94694793c979cedad81fc, type: 3}
+  dammahAudio: {fileID: 8300000, guid: 05a101fa0c01b0345880533e78875853, type: 3}

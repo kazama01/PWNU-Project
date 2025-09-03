@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0921aec58bb0f3543bd9d7119c8077b8
+guid: 320627da9b593d941a5b70e24c4323a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7510192435562721206
-    second: Group 271_0
+      213: 4626485763063884198
+    second: UI Menu Game (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Group 271_0
+      name: UI Menu Game (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a40557345cf66c790800000000000000
-      internalID: -7510192435562721206
+      spriteID: 6a923d11a44943040800000000000000
+      internalID: 4626485763063884198
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Group 271_0: -7510192435562721206
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

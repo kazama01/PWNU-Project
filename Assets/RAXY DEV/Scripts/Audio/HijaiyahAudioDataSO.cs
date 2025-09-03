@@ -6,6 +6,8 @@ public class HijaiyahAudioDataSO : ScriptableObject
 {
     [Title("Letter Information")]
     public ArabLetter letter;
+    public Sprite letterSprite;
+    public string prefixPronounciation;
 
     [Title("Harakat Audio")]
     [Tooltip("Audio clip for the letter with Fathah (A sound)")]
@@ -16,14 +18,4 @@ public class HijaiyahAudioDataSO : ScriptableObject
     
     [Tooltip("Audio clip for the letter with Dammah (U sound)")]
     public AudioClip dammahAudio;
-    
-    [Title("Harakat Visuals")]
-    [Tooltip("Sprite for the letter with Fathah (A sound)")]
-    public Sprite fathahSprite;
-    
-    [Tooltip("Sprite for the letter with Kasrah (I sound)")]
-    public Sprite kasrahSprite;
-    
-    [Tooltip("Sprite for the letter with Dammah (U sound)")]
-    public Sprite dammahSprite;
 }
