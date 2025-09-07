@@ -15,17 +15,51 @@ public class HarakatSeekerSceneManager : SceneManagerBase
     private int currentLetterIndex = 0;
 
     [ShowInInspector, ReadOnly]
-    public HijaiyahAudioDataSO CurrentLetterSO => allLetterAudioDataList[currentLetterIndex];
+    public HijaiyahAudioDataSO CurrentLetterSO
+    {
+        get
+        {
+            if (_buildedAudioData == null || _buildedAudioData.Count == 0)
+                return null;
 
-    [HorizontalGroup("Letters")]
-    public List<Image> letterImages;
+            if (currentLetterIndex < 0 || currentLetterIndex >= _buildedAudioData.Count)
+                return null;
 
-    [HorizontalGroup("Letters")]
-    public List<TextMeshProUGUI> letterPronounciations;
+            return _buildedAudioData[currentLetterIndex];
+        }
+    }
+
+
+    // [HorizontalGroup("Letters")]
+    // public List<Image> letterImages;
+
+    // [HorizontalGroup("Letters")]
+    // public List<TextMeshProUGUI> letterPronounciations;
+
+    public List<HijaiyahHarokatUI> harakatButtons;
+
+    [ShowInInspector]
+    [ReadOnly]
+    [ListDrawerSettings(ShowIndexLabels = true)]
+    List<HijaiyahAudioDataSO> _buildedAudioData = new();
+
+    public static HarakatSeekerSceneManager Instance { get; set; }
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     protected override void Start()
     {
         base.Start();
+
+        _buildedAudioData.Clear();
+        foreach (var letterData in allLetterAudioDataList)
+        {
+            _buildedAudioData.Add(letterData);
+            _buildedAudioData.Add(letterData);
+        }
 
         // Initialize the audio manager and register all audio data
         InitializeAudioManager();
@@ -55,9 +89,9 @@ public class HarakatSeekerSceneManager : SceneManagerBase
     [Button]
     public void ShowNextLetter()
     {
-        if (allLetterAudioDataList != null && allLetterAudioDataList.Count > 0)
+        if (_buildedAudioData != null && _buildedAudioData.Count > 0)
         {
-            currentLetterIndex = (currentLetterIndex + 1) % allLetterAudioDataList.Count;
+            currentLetterIndex = (currentLetterIndex + 1) % _buildedAudioData.Count;
             ShowCurrentLetter();
         }
     }
@@ -65,9 +99,9 @@ public class HarakatSeekerSceneManager : SceneManagerBase
     [Button]
     public void ShowPreviousLetter()
     {
-        if (allLetterAudioDataList != null && allLetterAudioDataList.Count > 0)
+        if (_buildedAudioData != null && _buildedAudioData.Count > 0)
         {
-            currentLetterIndex = (currentLetterIndex - 1 + allLetterAudioDataList.Count) % allLetterAudioDataList.Count;
+            currentLetterIndex = (currentLetterIndex - 1 + _buildedAudioData.Count) % _buildedAudioData.Count;
             ShowCurrentLetter();
         }
     }
@@ -75,20 +109,20 @@ public class HarakatSeekerSceneManager : SceneManagerBase
     [Button]
     private void ShowCurrentLetter()
     {
-        if (allLetterAudioDataList == null || allLetterAudioDataList.Count == 0)
+        if (_buildedAudioData == null || _buildedAudioData.Count == 0)
         {
             Debug.LogError("No letter data available in allLetterAudioDataList. Please assign HijaiyahAudioDataSO objects to the list.");
             return;
         }
 
-        if (currentLetterIndex < 0 || currentLetterIndex >= allLetterAudioDataList.Count)
+        if (currentLetterIndex < 0 || currentLetterIndex >= _buildedAudioData.Count)
         {
-            Debug.LogError($"Current letter index {currentLetterIndex} is out of range for list with {allLetterAudioDataList.Count} items.");
+            Debug.LogError($"Current letter index {currentLetterIndex} is out of range for list with {_buildedAudioData.Count} items.");
             currentLetterIndex = 0;
         }
 
         // Get the current letter data
-        var currentLetterData = allLetterAudioDataList[currentLetterIndex];
+        var currentLetterData = _buildedAudioData[currentLetterIndex];
 
         if (currentLetterData == null)
         {
@@ -96,117 +130,62 @@ public class HarakatSeekerSceneManager : SceneManagerBase
             return;
         }
 
-        // Update the UI text if available
-        // if (letterNameText)
-        // {
-        //     letterNameText.text = currentLetterData.letter.ToString();
-        // }
-
-        // Clear existing buttons and create new ones
-        //ClearButtons();
         SpawnHarakatButtonsForLetter(currentLetterData);
-
-        // Update navigation button states
-        //UpdateNavigationButtons();
     }
-
-    // private void ClearButtons()
-    // {
-    //     foreach (var button in _spawnedButtons)
-    //     {
-    //         if (button != null)
-    //         {
-    //             Destroy(button);
-    //         }
-    //     }
-    //     _spawnedButtons.Clear();
-    // }
 
     private void SpawnHarakatButtonsForLetter(HijaiyahAudioDataSO letterData)
     {
-        // if (letterData == null || audioLetterButtonPrefab == null || canvasTransform == null)
-        // {
-        //     Debug.LogError("Missing required components for button creation: letterData, audioLetterButtonPrefab, or canvasTransform.");
-        //     return;
-        // }
+        if (harakatButtons == null || harakatButtons.Count < 3)
+            return;
 
-        // if (fathahButtonAnchor == null || kasrahButtonAnchor == null || dammahButtonAnchor == null)
-        // {
-        //     Debug.LogError("One or more Harakat button anchors (fathahButtonAnchor, kasrahButtonAnchor, dammahButtonAnchor) are not assigned in the Inspector.");
-        //     return;
-        // }
-
-        // // Create all three harakat buttons using the world positions from the assigned anchors
-        // CreateHarakatButton(letterData, HarakatType.Fathah, fathahButtonAnchor.position);
-        // CreateHarakatButton(letterData, HarakatType.Kasrah, kasrahButtonAnchor.position);
-        // CreateHarakatButton(letterData, HarakatType.Dammah, dammahButtonAnchor.position);
-
-        foreach (var letterImg in letterImages)
+        if (currentLetterIndex % 2 == 0)
         {
-            letterImg.sprite = letterData.letterSprite;
+            // Even index → Non-tain
+            harakatButtons[0].Setup(letterData, HarokatType.Fathah);
+            harakatButtons[1].Setup(letterData, HarokatType.Kasroh);
+            harakatButtons[2].Setup(letterData, HarokatType.Dhommah);
         }
-
-        int index = 0;
-        foreach (var pronounce in letterPronounciations)
+        else
         {
-            if (index == 0)
-            {
-                pronounce.text = $"{letterData.prefixPronounciation}a".ToLower();
-            }
-            else if (index == 1)
-            {
-                pronounce.text = $"{letterData.prefixPronounciation}i".ToLower();
-            }
-            else if (index == 2)
-            {
-                pronounce.text = $"{letterData.prefixPronounciation}u".ToLower();
-            }
-
-            index++;
+            // Odd index → Tain
+            harakatButtons[0].Setup(letterData, HarokatType.Fathahtain);
+            harakatButtons[1].Setup(letterData, HarokatType.Kasrohtain);
+            harakatButtons[2].Setup(letterData, HarokatType.Dhommahtain);
         }
     }
 
-    public void PlayLetterAudio_A()
+    public void PlayLetterAudio(HijaiyahAudioDataSO audioData, HarokatType harokat)
     {
-        HijaiyahAudioManager.Instance.PlayAudioClip(CurrentLetterSO.fathahAudio);
+        switch (harokat)
+        {
+            case HarokatType.Fathah:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.fathahAudio);
+                break;
+            case HarokatType.Fathahtain:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.fathahtainAudio);
+                break;
+            case HarokatType.Kasroh:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.kasrahAudio);
+                break;
+            case HarokatType.Kasrohtain:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.kasrahtainAudio);
+                break;
+            case HarokatType.Dhommah:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.dammahAudio);
+                break;
+            case HarokatType.Dhommahtain:
+                HijaiyahAudioManager.Instance.PlayAudioClip(audioData.dammahtainAudio);
+                break;
+        }
     }
+}
 
-    public void PlayLetterAudio_I()
-    {
-        HijaiyahAudioManager.Instance.PlayAudioClip(CurrentLetterSO.kasrahAudio);
-    }
-    
-    public void PlayLetterAudio_U()
-    {
-        HijaiyahAudioManager.Instance.PlayAudioClip(CurrentLetterSO.dammahAudio);
-    }
-    
-    // private void CreateHarakatButton(HijaiyahAudioDataSO letterData, HarakatType harakatType, Vector3 worldPosition)
-    // {
-    //     // var button = Instantiate(audioLetterButtonPrefab.gameObject, canvasTransform);
-    //     // // Set the button's world position to match the anchor's world position.
-    //     // // This aligns the pivot of the button with the pivot of the anchor GameObject.
-    //     // button.transform.position = worldPosition;
-
-    //     // var buttonUI = button.GetComponent<AudioLetterButtonUI>();
-    //     // buttonUI.SetupWithExplicitHarakat(letterData.letter, letterData, harakatType);
-
-    //     // button.name = $"{letterData.letter} - {harakatType}";
-    //     // _spawnedButtons.Add(button);
-    // }
-
-    // private void UpdateNavigationButtons()
-    // {
-    //     bool hasMultipleLetters = (allLetterAudioDataList != null && allLetterAudioDataList.Count > 1);
-
-    //     if (nextButton) nextButton.interactable = hasMultipleLetters;
-    //     if (previousButton) previousButton.interactable = hasMultipleLetters;
-    // }
-
-    // private void OnDestroy()
-    // {
-    //     // Clean up listeners
-    //     if (nextButton) nextButton.onClick.RemoveListener(ShowNextLetter);
-    //     if (previousButton) previousButton.onClick.RemoveListener(ShowPreviousLetter);
-    // }
+public enum HarokatType
+{
+    Fathah,
+    Fathahtain,
+    Kasroh,
+    Kasrohtain,
+    Dhommah,
+    Dhommahtain
 }
