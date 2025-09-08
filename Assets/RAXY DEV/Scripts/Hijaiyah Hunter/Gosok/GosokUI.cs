@@ -16,5 +16,6 @@ public class GosokUI : MonoBehaviour
 
         scratcher.enabled = true;
         scratcher.Setup(selectedObject.objectImage);
+        GosokDevManager.Instance.AudioSource.PlayOneShot(dataSO.letterAudio);
     }
 }

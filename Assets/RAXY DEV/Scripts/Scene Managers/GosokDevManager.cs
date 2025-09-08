@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using MEC;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,14 +46,14 @@ public class GosokDevManager : SceneManagerBase
     [ReadOnly]
     GosokUI _gosokUI;
 
-    AudioSource _audioSource;
+    public AudioSource AudioSource { get; private set; }
 
     public void Awake()
     {
         Instance = this;
         LoadSelectedGosokLetter();
 
-        _audioSource = GetComponent<AudioSource>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     public void LoadSelectedGosokLetter()
@@ -112,7 +113,7 @@ public class GosokDevManager : SceneManagerBase
         {
             PlayerDataManager.Instance.AddKoin(koinReward);
 
-            _audioSource.PlayOneShot(_selectedGosokObject.audio);
+            PlayAudioConsecutively(_selectedGosokObject.audioClips);
 
             _gosokUI.scratcher.enabled = false;
             _gosokUI.scratcher.transform.
@@ -121,7 +122,16 @@ public class GosokDevManager : SceneManagerBase
                 OnComplete(() =>
                 {
                     LoadNext();
-                });        
+                });
+        }
+    }
+
+    public IEnumerator<float> PlayAudioConsecutively(List<AudioClip> audioClips)
+    {
+        foreach (var clip in audioClips)
+        {
+            AudioSource.PlayOneShot(clip);
+            yield return Timing.WaitForSeconds(clip.length);
         }
     }
 }

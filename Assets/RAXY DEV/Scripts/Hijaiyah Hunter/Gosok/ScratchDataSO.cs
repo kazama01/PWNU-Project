@@ -9,6 +9,7 @@ public class ScratchDataSO : ScriptableObject
 {
     public ArabLetter letter;
 
+    public AudioClip letterAudio;
     public Sprite letterImage;
 
     [ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "objectName")]
@@ -55,7 +56,7 @@ public class ScratchObjectAudio
 
     public Texture2D nameImage;
     public Texture2D objectImage;
-    public AudioClip audio;
+    public List<AudioClip> audioClips;
 }
 
 public enum ArabLetter
