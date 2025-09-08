@@ -9,12 +9,12 @@ public class GosokUI : MonoBehaviour
     public ScratchController scratcher;
 
     [Button]
-    public void Setup(ScratchDataSO dataSO)
+    public void Setup(ScratchDataSO dataSO, ScratchObjectAudio selectedObject)
     {
-        ScratchObjectAudio selectedObject = dataSO.GetRandomObject();
-
         letterRawImageComp.texture = dataSO.letterImage.texture;
         nameRawImageComp.texture = selectedObject.nameImage;
+
+        scratcher.enabled = true;
         scratcher.Setup(selectedObject.objectImage);
     }
 }

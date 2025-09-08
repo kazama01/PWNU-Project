@@ -1,28 +1,32 @@
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GosokDevManager : SceneManagerBase
 {
+    public const string SELECTED_GOSOK_LETTER_KEY = "SelectedGosokLetter";
     public static GosokDevManager Instance;
 
     [TitleGroup("Gosok Manager")]
     public ScratchDatabaseSO scratchDatabaseSO;
 
-    public const string SELECTED_GOSOK_LETTER_KEY = "SelectedGosokLetter";
+    [TitleGroup("Settings")]
+    [SuffixLabel("%")]
+    public float winCondition = 95;
 
-    [TitleGroup("Gosok Manager")]
+    [TitleGroup("Settings")]
+    public int koinReward;
+
+    [TitleGroup("Debug")]
     [ShowInInspector]
     [ReadOnly]
     public string SelectedGosokLetterString { get; private set; }
 
-    [TitleGroup("Gosok Manager")]
-    [SuffixLabel("%")]
-    public float winCondition = 95;
-
-    [TitleGroup("Gosok Manager")]
-    public int koinReward;
-
+    [TitleGroup("Debug")]
+    [ShowInInspector]
+    [ReadOnly]
     public ArabLetter SelectedGosokLetter
     {
         get
@@ -31,15 +35,24 @@ public class GosokDevManager : SceneManagerBase
         }
     }
 
-    [TitleGroup("Gosok Manager")]
+    [TitleGroup("Debug")]
+    [ShowInInspector]
+    [ReadOnly]
+    ScratchObjectAudio _selectedGosokObject;
+
+    [TitleGroup("Debug")]
     [ShowInInspector]
     [ReadOnly]
     GosokUI _gosokUI;
+
+    AudioSource _audioSource;
 
     public void Awake()
     {
         Instance = this;
         LoadSelectedGosokLetter();
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void LoadSelectedGosokLetter()
@@ -52,7 +65,10 @@ public class GosokDevManager : SceneManagerBase
         base.Start();
 
         _gosokUI = FindFirstObjectByType<GosokUI>();
-        _gosokUI.Setup(scratchDatabaseSO.scratchDataDict[SelectedGosokLetter]);
+
+        var scratchData = scratchDatabaseSO.scratchDataDict[SelectedGosokLetter];
+        _selectedGosokObject = scratchData.GetRandomObject();
+        _gosokUI.Setup(scratchData, _selectedGosokObject);
 
         _gosokUI.scratcher.OnBlackWhiteRatioCalculated += BlackWhiteCalculatedHandler;
     }
@@ -81,7 +97,8 @@ public class GosokDevManager : SceneManagerBase
                 PlayerPrefs.SetString(SELECTED_GOSOK_LETTER_KEY, SelectedGosokLetterString);
                 PlayerPrefs.Save();
 
-                _gosokUI.Setup(scratchData);
+                _selectedGosokObject = scratchData.GetRandomObject();
+                _gosokUI.Setup(scratchData, _selectedGosokObject);
                 return;
             }
         }
@@ -94,7 +111,17 @@ public class GosokDevManager : SceneManagerBase
         if (whiteRatio >= winCondition)
         {
             PlayerDataManager.Instance.AddKoin(koinReward);
-            LoadNext();
+
+            _audioSource.PlayOneShot(_selectedGosokObject.audio);
+
+            _gosokUI.scratcher.enabled = false;
+            _gosokUI.scratcher.transform.
+                DOPunchScale(Vector3.one * 0.1f, 0.5f, 10, 1).
+                SetEase(Ease.OutElastic).
+                OnComplete(() =>
+                {
+                    LoadNext();
+                });        
         }
     }
 }
