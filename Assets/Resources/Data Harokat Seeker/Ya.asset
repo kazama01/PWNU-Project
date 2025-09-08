@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d61b93e79395c48b79e213d6602f15, type: 3}
   m_Name: Ya
   m_EditorClassIdentifier: 
-  letter: 28
-  letterSprite: {fileID: 21300000, guid: c587b83a51240704d97b6da8d715f564, type: 3}
-  prefixPronounciation: h
+  letter: 29
+  letterSprite: {fileID: 21300000, guid: 130a53999161b1f41902bf3261d1e80e, type: 3}
+  prefixPronounciation: y
   fathahAudio: {fileID: 8300000, guid: 0688f73ae41635f48b6e7f612698e5d6, type: 3}
   kasrahAudio: {fileID: 8300000, guid: 4210fc20847fc934db5961982f4a8365, type: 3}
   dammahAudio: {fileID: 8300000, guid: 0038c8cf9f018c34999f4c647b6c4173, type: 3}
