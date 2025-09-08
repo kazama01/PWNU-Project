@@ -769,12 +769,7 @@ MonoBehaviour:
   backTargetSceneName: Menu Game
   backButtonPosOverrider: {fileID: 0}
   showPlayerData: 1
-  allLetterAudioDataList:
-  - {fileID: 11400000, guid: f5dd661f8a64e4c4fbcbe42f4662ac8d, type: 2}
-  - {fileID: 11400000, guid: e61d4e4f0d55724468385be555e5f055, type: 2}
-  - {fileID: 11400000, guid: aea624aac671645438b94f7d50a03d46, type: 2}
-  - {fileID: 11400000, guid: 5d85f7f50d39b704981f4afd1cb3b3a7, type: 2}
-  - {fileID: 11400000, guid: 6e6dc3daef5b2ab48a56a465f515392c, type: 2}
+  database: {fileID: 11400000, guid: e4c078837ea8b324f879cf1cb1442a30, type: 2}
   harakatButtons:
   - {fileID: 400272963}
   - {fileID: 1481865145}

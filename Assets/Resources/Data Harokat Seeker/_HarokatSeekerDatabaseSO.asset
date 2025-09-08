@@ -9,51 +9,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c775aab0f3f181642a53fcaed85e869f, type: 3}
-  m_Name: _Scratch Database SO
+  m_Script: {fileID: 11500000, guid: 5fe3f05201b5f574dbeb128d19a2bcd2, type: 3}
+  m_Name: _HarokatSeekerDatabaseSO
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 703dfcc0d39d11844b118035c0256edf, type: 2}
-    - {fileID: 11400000, guid: 6ec5038096aa27d45889889d2683d091, type: 2}
-    - {fileID: 11400000, guid: 314f844a04fb6ed4da693cd2035b6186, type: 2}
-    - {fileID: 11400000, guid: 72b13a8a6c023b04481c7542994ecc73, type: 2}
-    - {fileID: 11400000, guid: d49bc8827fe41cb409f1b1cc4bfa38e7, type: 2}
-    - {fileID: 11400000, guid: 2dcfcfac53eface41935d110fe6fab8d, type: 2}
-    - {fileID: 11400000, guid: c4ffdd75562132841807c08963889df3, type: 2}
-    - {fileID: 11400000, guid: 73b469012f8d84247af7b75dbe08fc7c, type: 2}
-    - {fileID: 11400000, guid: 1ccfb57e32622c347aec250231215d9a, type: 2}
-    - {fileID: 11400000, guid: b8d3c94f3624fdf43a58cbed59e1012e, type: 2}
-    - {fileID: 11400000, guid: 996214921f9f6914a9b3a3625add2d05, type: 2}
-    - {fileID: 11400000, guid: 365f6c04fc204b34f80dee2262c8f627, type: 2}
-    - {fileID: 11400000, guid: d0c733c1e52813747a93b54e69795c49, type: 2}
-    - {fileID: 11400000, guid: b91927e24ea1dab44b29435f0c944258, type: 2}
-    - {fileID: 11400000, guid: e4c0ab34d780ca54ebc391361f11792a, type: 2}
-    - {fileID: 11400000, guid: 6fb60d06b737e464b947a2815a400084, type: 2}
-    - {fileID: 11400000, guid: 60b4dd8f8e232754d8dfd002c0f3af98, type: 2}
-    - {fileID: 11400000, guid: 356563269dd4d5041a46eb3c36e19832, type: 2}
-    - {fileID: 11400000, guid: 2de75798c0aa8ff4a9985be7e7b08068, type: 2}
-    - {fileID: 11400000, guid: daefe284e6bff4647a32c5c9b18cf4db, type: 2}
-    - {fileID: 11400000, guid: d60c838c1319536429be64ffe81aa253, type: 2}
-    - {fileID: 11400000, guid: 3bbc441338c23394cbdcf900e9687568, type: 2}
-    - {fileID: 11400000, guid: f79d1acbbfe527849a1d9d3fd950b178, type: 2}
-    - {fileID: 11400000, guid: 94d2f1adea130d24fa609b7364df77da, type: 2}
-    - {fileID: 11400000, guid: 576a7e5f07016944a961c27ee8a4e7b5, type: 2}
-    - {fileID: 11400000, guid: 3004a5f348a210246ad93c2c003a27da, type: 2}
-    - {fileID: 11400000, guid: f2cf8047b3d5f80438b5c543b65905f0, type: 2}
-    - {fileID: 11400000, guid: 168f8b64ce9af3f48973fa60fa949861, type: 2}
-    - {fileID: 11400000, guid: edba5c72c6b6cfd48a783700314b6aa8, type: 2}
-    - {fileID: 11400000, guid: 4c32c149465df1840b6963b8b771497a, type: 2}
+    - {fileID: 11400000, guid: f5dd661f8a64e4c4fbcbe42f4662ac8d, type: 2}
+    - {fileID: 11400000, guid: e61d4e4f0d55724468385be555e5f055, type: 2}
+    - {fileID: 11400000, guid: aea624aac671645438b94f7d50a03d46, type: 2}
+    - {fileID: 11400000, guid: 5d85f7f50d39b704981f4afd1cb3b3a7, type: 2}
+    - {fileID: 11400000, guid: 6e6dc3daef5b2ab48a56a465f515392c, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: scratchDataDict
+    - Name: harakatDataDict
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[ArabLetter, Assembly-CSharp],[ScratchDataSO,
+      Data: 0|System.Collections.Generic.Dictionary`2[[ArabLetter, Assembly-CSharp],[HijaiyahAudioDataSO,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
@@ -138,8 +113,8 @@ MonoBehaviour:
       Entry: 3
       Data: 5
     - Name: $v
-      Entry: 10
-      Data: 5
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -150,8 +125,8 @@ MonoBehaviour:
       Entry: 3
       Data: 6
     - Name: $v
-      Entry: 10
-      Data: 6
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -162,8 +137,8 @@ MonoBehaviour:
       Entry: 3
       Data: 7
     - Name: $v
-      Entry: 10
-      Data: 7
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -174,8 +149,8 @@ MonoBehaviour:
       Entry: 3
       Data: 8
     - Name: $v
-      Entry: 10
-      Data: 8
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -186,8 +161,8 @@ MonoBehaviour:
       Entry: 3
       Data: 9
     - Name: $v
-      Entry: 10
-      Data: 9
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -198,8 +173,8 @@ MonoBehaviour:
       Entry: 3
       Data: 10
     - Name: $v
-      Entry: 10
-      Data: 10
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -210,8 +185,8 @@ MonoBehaviour:
       Entry: 3
       Data: 11
     - Name: $v
-      Entry: 10
-      Data: 11
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -222,8 +197,8 @@ MonoBehaviour:
       Entry: 3
       Data: 12
     - Name: $v
-      Entry: 10
-      Data: 12
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -234,8 +209,8 @@ MonoBehaviour:
       Entry: 3
       Data: 13
     - Name: $v
-      Entry: 10
-      Data: 13
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -246,8 +221,8 @@ MonoBehaviour:
       Entry: 3
       Data: 14
     - Name: $v
-      Entry: 10
-      Data: 14
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -258,8 +233,8 @@ MonoBehaviour:
       Entry: 3
       Data: 15
     - Name: $v
-      Entry: 10
-      Data: 15
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -270,8 +245,8 @@ MonoBehaviour:
       Entry: 3
       Data: 16
     - Name: $v
-      Entry: 10
-      Data: 16
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -282,8 +257,8 @@ MonoBehaviour:
       Entry: 3
       Data: 17
     - Name: $v
-      Entry: 10
-      Data: 17
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -294,8 +269,8 @@ MonoBehaviour:
       Entry: 3
       Data: 18
     - Name: $v
-      Entry: 10
-      Data: 18
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -306,8 +281,8 @@ MonoBehaviour:
       Entry: 3
       Data: 19
     - Name: $v
-      Entry: 10
-      Data: 19
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -318,8 +293,8 @@ MonoBehaviour:
       Entry: 3
       Data: 20
     - Name: $v
-      Entry: 10
-      Data: 20
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -330,8 +305,8 @@ MonoBehaviour:
       Entry: 3
       Data: 21
     - Name: $v
-      Entry: 10
-      Data: 21
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -342,8 +317,8 @@ MonoBehaviour:
       Entry: 3
       Data: 22
     - Name: $v
-      Entry: 10
-      Data: 22
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -354,8 +329,8 @@ MonoBehaviour:
       Entry: 3
       Data: 23
     - Name: $v
-      Entry: 10
-      Data: 23
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -366,8 +341,8 @@ MonoBehaviour:
       Entry: 3
       Data: 24
     - Name: $v
-      Entry: 10
-      Data: 24
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -378,8 +353,8 @@ MonoBehaviour:
       Entry: 3
       Data: 25
     - Name: $v
-      Entry: 10
-      Data: 25
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -390,8 +365,8 @@ MonoBehaviour:
       Entry: 3
       Data: 26
     - Name: $v
-      Entry: 10
-      Data: 26
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -402,8 +377,8 @@ MonoBehaviour:
       Entry: 3
       Data: 27
     - Name: $v
-      Entry: 10
-      Data: 27
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -414,8 +389,8 @@ MonoBehaviour:
       Entry: 3
       Data: 28
     - Name: $v
-      Entry: 10
-      Data: 28
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -426,8 +401,8 @@ MonoBehaviour:
       Entry: 3
       Data: 29
     - Name: $v
-      Entry: 10
-      Data: 29
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -437,4 +412,4 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  path: Data Hijaiyah Hunter
+  path: Data Harokat Seeker
