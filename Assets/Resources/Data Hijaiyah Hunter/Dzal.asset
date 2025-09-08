@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Dzal
   m_EditorClassIdentifier: 
   letter: 8
+  letterAudio: {fileID: 8300000, guid: 4367006783b0c18499f0dd55de99be81, type: 3}
   letterImage: {fileID: 21300000, guid: 1007e6d12b953024099cec6ba81079ea, type: 3}
   objects:
   - objectName: dzahabun_emas
     nameImage: {fileID: 2800000, guid: a1988baeec91dd54ba7734c4696ece81, type: 3}
     objectImage: {fileID: 2800000, guid: 927aed0e1f23fd4489526b31aaf5c2ea, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 7fbd3650730fa8c4a9a0026fefd899da, type: 3}
+    - {fileID: 8300000, guid: 24e718356e4640d4da164f6f22f4fe81, type: 3}
   - objectName: dziro_un_lengan
     nameImage: {fileID: 2800000, guid: 2a2568c70282e854394ed87f21b55eeb, type: 3}
     objectImage: {fileID: 2800000, guid: 32291380783b3574cb87f1dc8a523fb2, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: d6121190a42c0b5459b75d07d1f8b159, type: 3}
+    - {fileID: 8300000, guid: beda19989eccadb40b8fce25150ad0fc, type: 3}
   - objectName: dzi_bun_serigala
     nameImage: {fileID: 2800000, guid: 4bcb31beac99b1d4fbdb3e541dd8fb60, type: 3}
     objectImage: {fileID: 2800000, guid: f01fd85149d0a8d4d9fe007163575b0f, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 369034cd243a02d448d3efed637c14f2, type: 3}
+    - {fileID: 8300000, guid: eae7b9bc0d7f5124b81368e405a1efe8, type: 3}

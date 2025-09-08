@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Syin
   m_EditorClassIdentifier: 
   letter: 12
+  letterAudio: {fileID: 8300000, guid: 7bc590d7014d84242a4864d5d922a3f7, type: 3}
   letterImage: {fileID: 21300000, guid: 2a7965c4c63c552428abe124ecaadef1, type: 3}
   objects:
   - objectName: sam_atub_lilin
     nameImage: {fileID: 2800000, guid: d4347044ca8d03b49864b4a2d15687b6, type: 3}
     objectImage: {fileID: 2800000, guid: 22c1cf5dfdc72014ea194367528a21d0, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 99a5c7f2851ad5746b3bf5238c97cdcb, type: 3}
+    - {fileID: 8300000, guid: a7c9e3af3787ef1418bf1496173a83cb, type: 3}
   - objectName: samsun_matahari
     nameImage: {fileID: 2800000, guid: 83f6b8dbaecd3f240b7bba5dbe30a122, type: 3}
     objectImage: {fileID: 2800000, guid: 45d87cab2e2af8c4daffb04f462744ce, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 4468d789e8d901448bebd097acfd4471, type: 3}
+    - {fileID: 8300000, guid: 4e060e9651c550a4088cf3774ed64c3b, type: 3}
   - objectName: sajarotun_pohon
     nameImage: {fileID: 2800000, guid: 9cce3b6511b7a1147b6a6ab2c917b168, type: 3}
     objectImage: {fileID: 2800000, guid: 978b8625d50cc674998873542747acf9, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 9b2ea8f7acf88b748bd9de5de7af157d, type: 3}
+    - {fileID: 8300000, guid: fd1508faa804aab4b9af50b300d379bf, type: 3}

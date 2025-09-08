@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Za'
   m_EditorClassIdentifier: 
   letter: 10
+  letterAudio: {fileID: 8300000, guid: 28e504559d0255a42ac03c24cab0b746, type: 3}
   letterImage: {fileID: 21300000, guid: d6a275576f23cd9478372c541bc611ac, type: 3}
   objects:
   - objectName: zahrun_bunga
     nameImage: {fileID: 2800000, guid: b7f33f71736965c458e116a4e5c207f2, type: 3}
     objectImage: {fileID: 2800000, guid: 9c9fa967384d22942a864b48e149633c, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: f8f5efa8e54919c45bba34c16e969de8, type: 3}
+    - {fileID: 8300000, guid: 94bdf981a7e8e0943a060e3b0495f2af, type: 3}
   - objectName: zarofatun_jerapah
     nameImage: {fileID: 2800000, guid: 4dcb6f5dcf930f448b9298d7354b9281, type: 3}
     objectImage: {fileID: 2800000, guid: 4bbf639c5b011b64a912e498dd2265e0, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: a42936839fe8d7644a383bb7f2e0aa7c, type: 3}
+    - {fileID: 8300000, guid: dc7412872e9f094459cb6b749e50459e, type: 3}
   - objectName: zaitunun_zaitun
     nameImage: {fileID: 2800000, guid: 6c444cea18a5fda4a9a63bf7767beb6b, type: 3}
     objectImage: {fileID: 2800000, guid: 36c9d3fe81c8dcf4da26e853f22c7f57, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: d91fa7ac338b466459500bad0421416c, type: 3}
+    - {fileID: 8300000, guid: 2d1782c21b8331948ae9507504f7b7ff, type: 3}
