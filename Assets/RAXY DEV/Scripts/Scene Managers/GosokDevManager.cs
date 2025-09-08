@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using MEC;
 using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,14 @@ public class GosokDevManager : SceneManagerBase
 
     [TitleGroup("Settings")]
     public int koinReward;
+
+    [TitleGroup("Settings")]
+    [SuffixLabel("seconds")]
+    public float delayForConsecutiveAudio = 1;
+
+    [TitleGroup("Settings")]
+    [SuffixLabel("seconds")]
+    public float delayForLoadNext = 2;
 
     [TitleGroup("Debug")]
     [ShowInInspector]
@@ -111,27 +120,27 @@ public class GosokDevManager : SceneManagerBase
     {
         if (whiteRatio >= winCondition)
         {
-            PlayerDataManager.Instance.AddKoin(koinReward);
-
-            PlayAudioConsecutively(_selectedGosokObject.audioClips);
+            PlayerDataManager.Instance?.AddKoin(koinReward);
 
             _gosokUI.scratcher.enabled = false;
             _gosokUI.scratcher.transform.
                 DOPunchScale(Vector3.one * 0.1f, 0.5f, 10, 1).
-                SetEase(Ease.OutElastic).
-                OnComplete(() =>
-                {
-                    LoadNext();
-                });
+                SetEase(Ease.OutElastic);
+            
+            Timing.RunCoroutine(PlayAudioConsecutively(_selectedGosokObject.audioClips, LoadNext));
         }
     }
 
-    public IEnumerator<float> PlayAudioConsecutively(List<AudioClip> audioClips)
+    public IEnumerator<float> PlayAudioConsecutively(List<AudioClip> audioClips, Action OnDone)
     {
         foreach (var clip in audioClips)
         {
             AudioSource.PlayOneShot(clip);
-            yield return Timing.WaitForSeconds(clip.length);
+            yield return Timing.WaitForSeconds(clip.length + delayForConsecutiveAudio);
         }
+
+        yield return Timing.WaitForSeconds(delayForLoadNext);
+
+        OnDone?.Invoke();
     }
 }
