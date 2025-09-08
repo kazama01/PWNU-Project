@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Ta
   m_EditorClassIdentifier: 
   letter: 2
+  letterAudio: {fileID: 8300000, guid: d92a1e4a364bb394d9b3e2704e424f9c, type: 3}
   letterImage: {fileID: 21300000, guid: a4424ff31e96df54f85474131b551468, type: 3}
   objects:
   - objectName: tuffahun_apel
     nameImage: {fileID: 2800000, guid: 43cb481405860cc479fbf375930c096f, type: 3}
     objectImage: {fileID: 2800000, guid: 22ab20eae05b43d4bb56221eace96d54, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 9d847849a2a83ee4bb5fdacefd09ecb1, type: 3}
+    - {fileID: 8300000, guid: aabbed02448cae3489da7b7ed44ff621, type: 3}
   - objectName: tinninun_naga
     nameImage: {fileID: 2800000, guid: a34587fcdb1aae64b86385274c778985, type: 3}
     objectImage: {fileID: 2800000, guid: 03f8ea11362e2ee48a08033c187f4f1b, type: 3}
-    audio: {fileID: 0}
-  - objectName: batho_bebek
-    nameImage: {fileID: 2800000, guid: a39f5a76916dd4f44972d3215baea101, type: 3}
-    objectImage: {fileID: 2800000, guid: 33f787712285bbe47bebafd6761a1398, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 303a839b635290b4387d4cb0986245d8, type: 3}
+    - {fileID: 8300000, guid: f81dd90f983ae4f45a3ed16439237690, type: 3}
+  - objectName: tajun_mahkota
+    nameImage: {fileID: 2800000, guid: b37e1db101d810542bcc4a7785887e29, type: 3}
+    objectImage: {fileID: 2800000, guid: 4a8d539d750e74e4dbcd67c00c82b9c5, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 982d678480c402c42885d69867da653b, type: 3}
+    - {fileID: 8300000, guid: 6aedc8bfbde18f447bac389e3a273f07, type: 3}

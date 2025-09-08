@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Jim
   m_EditorClassIdentifier: 
   letter: 4
+  letterAudio: {fileID: 8300000, guid: fad6a33ea79475b4ba24a99feadc5bc4, type: 3}
   letterImage: {fileID: 21300000, guid: 9c3b8ee09611c9b46a9e03dc3bb717ea, type: 3}
   objects:
   - objectName: jabalun_gunung
     nameImage: {fileID: 2800000, guid: d567b712efb6f354895135bec2552b1d, type: 3}
     objectImage: {fileID: 2800000, guid: f0f2d8f259b31f7409f102962ed390d5, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: f72a6b711c371d9408c52ada7c67095c, type: 3}
+    - {fileID: 8300000, guid: 56f12414d46d94f479b9ed0f1515905a, type: 3}
   - objectName: jamalun_unta
     nameImage: {fileID: 2800000, guid: 039fe050d2cc0ae4487cbb582da0139b, type: 3}
     objectImage: {fileID: 2800000, guid: b8c97564f3dccf047bf6acef22860d66, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 76c40cf987c7507459061c295db666fe, type: 3}
+    - {fileID: 8300000, guid: aea4a740bfcb9854bafa8ddd037f436d, type: 3}
   - objectName: jazarun_wortel
     nameImage: {fileID: 2800000, guid: 47753cdecf5146049ba6a78e0940eb60, type: 3}
     objectImage: {fileID: 2800000, guid: 56efd2eee38319d4bb4a64b39d6af506, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 537bbba0ea27d9d40b3497f4a2efdaa8, type: 3}
+    - {fileID: 8300000, guid: 2fece6299128e00489e5c68bc2e9d3cb, type: 3}

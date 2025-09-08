@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Kho
   m_EditorClassIdentifier: 
   letter: 6
+  letterAudio: {fileID: 8300000, guid: bfe28084d507f9e41a579139453ab67f, type: 3}
   letterImage: {fileID: 21300000, guid: 3373b564487ca524e95a8c4362513c95, type: 3}
   objects:
   - objectName: kharufun_domba
     nameImage: {fileID: 2800000, guid: e8bd1272877f5a74e9d28cc56a2bc39c, type: 3}
     objectImage: {fileID: 2800000, guid: 048e11e219d15cd479edf2220bcb1715, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 7c9d1c0e902dd6b4cae5c4b019d8855b, type: 3}
+    - {fileID: 8300000, guid: 82d73bd7eea4e7e49b57032caf5aaff3, type: 3}
   - objectName: khubzun_roti
     nameImage: {fileID: 2800000, guid: 2c7d7219a1168d5439a4d8a40b2a9445, type: 3}
     objectImage: {fileID: 2800000, guid: 91ec72fe6041dc2429289ba295f45067, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: f6f632c58210f3e4ebcb9536b79a8694, type: 3}
+    - {fileID: 8300000, guid: 2564536ae45d87549b60380c53c413a1, type: 3}
   - objectName: khaimatun_tenda
     nameImage: {fileID: 2800000, guid: aafef390793e6c74ea371618e8a79fd7, type: 3}
     objectImage: {fileID: 2800000, guid: f585ee584b6679341ab0c4f2ea7eae7a, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 5a7ff0164cc6d4d43ae9e455c1517bc7, type: 3}
+    - {fileID: 8300000, guid: 416768c65a7c9cd41afafe902ecab0cd, type: 3}

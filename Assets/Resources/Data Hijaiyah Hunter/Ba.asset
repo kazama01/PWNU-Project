@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Ba
   m_EditorClassIdentifier: 
   letter: 1
+  letterAudio: {fileID: 8300000, guid: 6e2ced45d8f321547854531ffe15fb68, type: 3}
   letterImage: {fileID: 21300000, guid: 96458348cde3cf444a7a49065b9835c1, type: 3}
   objects:
   - objectName: babun_pintu
     nameImage: {fileID: 2800000, guid: abd3a03b865a33a4b9ba83f549053820, type: 3}
     objectImage: {fileID: 2800000, guid: e70f17b6c1c2a6541b8ba00d0c03fb93, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 741fe6463748f2846a3546ffdca13113, type: 3}
+    - {fileID: 8300000, guid: 4e9860dea542942489fd402e3a7fef50, type: 3}
   - objectName: baqorotun_sapi
     nameImage: {fileID: 2800000, guid: 7c086cdebba2cc045b3fcaa43cfdce6d, type: 3}
     objectImage: {fileID: 2800000, guid: 628e0c5312d4fe04f8646ff08361dc3f, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 705f0071e7e86e54999ab06635ec72a4, type: 3}
+    - {fileID: 8300000, guid: 8c48a83b2015b0f4b9df3db38f9642c6, type: 3}
   - objectName: batho_bebek
     nameImage: {fileID: 2800000, guid: a39f5a76916dd4f44972d3215baea101, type: 3}
     objectImage: {fileID: 2800000, guid: 33f787712285bbe47bebafd6761a1398, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 258b887b3c93db245b44d965b460be03, type: 3}
+    - {fileID: 8300000, guid: 7ff4f78c315b4844c8afc61df271a1d3, type: 3}

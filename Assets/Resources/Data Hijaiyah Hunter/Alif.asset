@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Alif
   m_EditorClassIdentifier: 
   letter: 0
+  letterAudio: {fileID: 8300000, guid: 44c836b20af8c8f409eaedd581abdf44, type: 3}
   letterImage: {fileID: 21300000, guid: b100832379d9c8d4e9ff950d8ef9948c, type: 3}
   objects:
   - objectName: ibrah_jarum
     nameImage: {fileID: 2800000, guid: 2db9b7eb1d1711149a4c1c5687aa0ba7, type: 3}
     objectImage: {fileID: 2800000, guid: ffec39dae035aa7408f8e1f6a6c4cbdc, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 503bbe0f4284b2246bd4e299c4c6967b, type: 3}
+    - {fileID: 8300000, guid: 51807fec1816550499112d70ea16481d, type: 3}
   - objectName: arnabun_kelinci
     nameImage: {fileID: 2800000, guid: 54d9db3ef1a96754d913997ee49077f5, type: 3}
     objectImage: {fileID: 2800000, guid: 16505e8cf89bc954ca747ff60745ce8d, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: a9a339fa71fb0e242b6cf00356650bd2, type: 3}
+    - {fileID: 8300000, guid: 8cf5aa93c42b7174ca90062e147147f0, type: 3}

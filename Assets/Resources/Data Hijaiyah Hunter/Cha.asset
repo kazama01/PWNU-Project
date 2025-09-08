@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Cha
   m_EditorClassIdentifier: 
   letter: 5
+  letterAudio: {fileID: 8300000, guid: 4d35b37fcc63dc4469a5896a20c3b483, type: 3}
   letterImage: {fileID: 21300000, guid: 946df540afa96014aaf4c01fa6c47ae7, type: 3}
   objects:
   - objectName: hisonun_kuda
     nameImage: {fileID: 2800000, guid: 37d93f2fe7ffd724286f1fc4958430cc, type: 3}
     objectImage: {fileID: 2800000, guid: c0335d4a6b14fa046bb20bc7c5c6a930, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 36470a3f7e4559f4eb919ca261d600d1, type: 3}
+    - {fileID: 8300000, guid: 5ad950712de902a4bbc15a91037262f5, type: 3}
   - objectName: hamamatun_merpati
     nameImage: {fileID: 2800000, guid: 15d83b47d8b501f468bf6b13865b8302, type: 3}
     objectImage: {fileID: 2800000, guid: 6ad6730c5c6fb274eb2204f61342c7eb, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 884f1608189d2a6439b2bbd21cd251cc, type: 3}
+    - {fileID: 8300000, guid: be7027afac0eb904086ef9b10054e292, type: 3}
   - objectName: haqibatun_tas
     nameImage: {fileID: 2800000, guid: 4d125cac7a599294492a0013a7ad4def, type: 3}
     objectImage: {fileID: 2800000, guid: b783f0b0596fb0b4db72df802ab452f5, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: eda48a65e622f0a4db3c75e1c092c824, type: 3}
+    - {fileID: 8300000, guid: be9165194724c9941acc83d2620902dd, type: 3}
