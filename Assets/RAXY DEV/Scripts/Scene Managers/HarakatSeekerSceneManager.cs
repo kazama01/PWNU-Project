@@ -7,13 +7,19 @@ using UnityEngine.UI;
 
 public class HarakatSeekerSceneManager : SceneManagerBase
 {
+    [TitleGroup("References")]
     [Tooltip("Audio data for each letter")]
-    public List<HijaiyahAudioDataSO> allLetterAudioDataList;
+    public HarokatSeekerDatabaseSO database;
 
+    [TitleGroup("References")]
+    public List<HijaiyahHarokatUI> harakatButtons;
+
+    [TitleGroup("Debug")]
     // Current index in the letter list
     [ShowInInspector, ReadOnly]
     private int currentLetterIndex = 0;
 
+    [TitleGroup("Debug")]
     [ShowInInspector, ReadOnly]
     public HijaiyahAudioDataSO CurrentLetterSO
     {
@@ -30,14 +36,7 @@ public class HarakatSeekerSceneManager : SceneManagerBase
     }
 
 
-    // [HorizontalGroup("Letters")]
-    // public List<Image> letterImages;
-
-    // [HorizontalGroup("Letters")]
-    // public List<TextMeshProUGUI> letterPronounciations;
-
-    public List<HijaiyahHarokatUI> harakatButtons;
-
+    [TitleGroup("Debug")]
     [ShowInInspector]
     [ReadOnly]
     [ListDrawerSettings(ShowIndexLabels = true)]
@@ -55,7 +54,7 @@ public class HarakatSeekerSceneManager : SceneManagerBase
         base.Start();
 
         _buildedAudioData.Clear();
-        foreach (var letterData in allLetterAudioDataList)
+        foreach (var letterData in database.harakatDataDict.Values)
         {
             _buildedAudioData.Add(letterData);
             _buildedAudioData.Add(letterData);
@@ -74,9 +73,9 @@ public class HarakatSeekerSceneManager : SceneManagerBase
         var audioManager = HijaiyahAudioManager.Instance;
 
         // Add all audio data to the manager
-        if (allLetterAudioDataList != null)
+        if (database.harakatDataDict != null)
         {
-            foreach (var audioData in allLetterAudioDataList)
+            foreach (var audioData in database.harakatDataDict.Values)
             {
                 if (audioData != null)
                 {
@@ -86,6 +85,7 @@ public class HarakatSeekerSceneManager : SceneManagerBase
         }
     }
 
+    [TitleGroup("Debug Functions")]
     [Button]
     public void ShowNextLetter()
     {
@@ -96,6 +96,7 @@ public class HarakatSeekerSceneManager : SceneManagerBase
         }
     }
 
+    [TitleGroup("Debug Functions")]
     [Button]
     public void ShowPreviousLetter()
     {
@@ -106,6 +107,7 @@ public class HarakatSeekerSceneManager : SceneManagerBase
         }
     }
 
+    [TitleGroup("Debug Functions")]
     [Button]
     private void ShowCurrentLetter()
     {
