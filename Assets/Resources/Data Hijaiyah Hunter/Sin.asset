@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Sin
   m_EditorClassIdentifier: 
   letter: 11
+  letterAudio: {fileID: 8300000, guid: 0673c8693b1561847b1fbf70c4f4be6c, type: 3}
   letterImage: {fileID: 21300000, guid: 0f206089aef067f44b34109a475f842a, type: 3}
   objects:
   - objectName: samakun_ikan
     nameImage: {fileID: 2800000, guid: 2d056f182baf1f04786e0a49f2f12a66, type: 3}
     objectImage: {fileID: 2800000, guid: 1f17b5196fb17ee42982c7089283cecd, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: c50df68efebf09741819d05845aebad2, type: 3}
+    - {fileID: 8300000, guid: 825ad4143acc03e4eace26e366e79880, type: 3}
   - objectName: sayyarotun_mobil
     nameImage: {fileID: 2800000, guid: ba39bfbf867667f41a39356f753a1716, type: 3}
     objectImage: {fileID: 2800000, guid: 891569cfcebb79249b9e5122184ed102, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 162ff3c31f1af4e49a386ae4ceaecac7, type: 3}
+    - {fileID: 8300000, guid: e2cafa8c000a4394cafb5b1e8df78052, type: 3}
   - objectName: saisun_pedang
     nameImage: {fileID: 2800000, guid: 488f21b10b2e45e4987e5f3ffdf7c189, type: 3}
     objectImage: {fileID: 2800000, guid: 40d57d4ee18c0fb40baa32abf247acb9, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 1e4d7971211e1e744815fa8f8fb9446b, type: 3}
+    - {fileID: 8300000, guid: 7c86dcac8032a294ca01d12a41460897, type: 3}

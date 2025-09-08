@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: Dal
   m_EditorClassIdentifier: 
   letter: 7
+  letterAudio: {fileID: 8300000, guid: bf6293d8566c22f4d903f339e71a10bc, type: 3}
   letterImage: {fileID: 21300000, guid: c97bfa0cabcd1b546adaf518a8717ee6, type: 3}
   objects:
   - objectName: dalwun_ember
     nameImage: {fileID: 2800000, guid: d6e1e8c0003c7fa4ab3eda16acff2b1a, type: 3}
     objectImage: {fileID: 2800000, guid: 6b27babf2b9aa144da7dd30a78cda67e, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 06982346619e5f44b8e0cc96335462a9, type: 3}
+    - {fileID: 8300000, guid: a64a4a4362cad954abf1648373d802ec, type: 3}
   - objectName: dajajatun_ayamBetina
     nameImage: {fileID: 2800000, guid: 44fd7806bf461b142900a719a1a013f8, type: 3}
     objectImage: {fileID: 2800000, guid: 78434e70e658eaa4d94765984a0c0938, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 08feb302a2cd9014d8f143e085d00d41, type: 3}
+    - {fileID: 8300000, guid: 4e5a5fcd62b661340af6a35df176d147, type: 3}
   - objectName: dikun_ayamJantan
     nameImage: {fileID: 2800000, guid: 5a955669bf3b48a4cac41a1fb2981767, type: 3}
     objectImage: {fileID: 2800000, guid: e111a2b17a7586940809c4f116b1a876, type: 3}
-    audio: {fileID: 0}
+    audioClips:
+    - {fileID: 8300000, guid: 0967656cb0a9e4740b8d84fd5cf3ec3b, type: 3}
+    - {fileID: 8300000, guid: bc874a1e01c36584cb9462487f249522, type: 3}
