@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: KH WAHAB CHASBULLAH
+  m_EditorClassIdentifier: 
+  heroName: KH WAHAB CHASBULLAH
+  heroTitle: Pendiri Nahdlatul Ulama
+  heroLifeSpan: "(1888\u20131971)"
+  heroDetail: "KH. Abdul Wahab Chasbullah (1888\u20131971) adalah ulama asal Jombang,
+    pendiri NU (Nahdlatul Ulama) bersama KH. Hasyim Asy\u2019ari, serta pelopor pemikiran
+    modern ulama Indonesia. Ia mendirikan MIAI (Majelis Islam Ala Indonesia), Masyumi,
+    dan kelompok diskusi Taswirul Afkar, menciptakan mars Ya Lal Wathon untuk menumbuhkan
+    nasionalisme santri, serta aktif dalam pergerakan kebangsaan. Atas jasanya, ia
+    ditetapkan sebagai Pahlawan Nasional pada 2014."
+  heroImage: {fileID: 21300000, guid: dcdaae021a5811145b4062d38c9579e8, type: 3}
+  heroDetailNarrationClip: {fileID: 0}
