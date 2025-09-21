@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: KH HASYIM ASY'ARI
+  m_EditorClassIdentifier: 
+  heroName: KH HASYIM ASY'ARI
+  heroTitle: Pendiri Nahdlatul Ulama
+  heroLifeSpan: "(1871\u20131947)"
+  heroDetail: "KH. Hasyim Asy\u2019ari (1871\u20131947) adalah pendiri Nahdlatul
+    Ulama (NU) dan Pesantren Tebuireng Jombang, bergelar Hadratussyaikh (Mahaguru)
+    serta Syaikhu al-Masyayikh (Gurunya Para Guru). Ia hafal Kutub At-Tis\u2019ah
+    (9 kitab hadis), dan merupakan ayah KH. A. Wahid Hasyim (pahlawan nasional) serta
+    kakek KH. Abdurrahman Wahid, Presiden RI ke-4."
+  heroImage: {fileID: 21300000, guid: 82a2c5736a20cb14a81a8e9c9b0eda0f, type: 3}
+  heroDetailNarrationClip: {fileID: 0}

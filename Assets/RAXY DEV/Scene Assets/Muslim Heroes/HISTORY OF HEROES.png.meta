@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HISTORY OF HEROES_0: -8509794812147354579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

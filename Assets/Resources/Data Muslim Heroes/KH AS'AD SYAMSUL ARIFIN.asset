@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: KH AS'AD SYAMSUL ARIFIN
+  m_EditorClassIdentifier: 
+  heroName: KH NOER ALI
+  heroTitle: Pahlawan Nasional dari Bekasi
+  heroLifeSpan: (1914-1992)
+  heroDetail: "\"KH Noer Alie (1914-1992), Beliau adalah Pahlawan Nasional asal Bekasi
+    berjuluk Singa Karawang-Bekasi, Beliau ulama karismatik dan pendiri Pesantren
+    At-taqwa. la menolak bekerja sama dengan Jepang, membentuk laskar rakyat, serta
+    memimpin Panitia Amanat Rakyat Bekasi untuk mendukung bergabungnya wilayah ke
+    NKRI. Selain menimba ilmu hingga Mekkah, ia juga aktif di politik dan pernah
+    menjabat Ketua Partai\_Masyumi.\""
+  heroImage: {fileID: 21300000, guid: 30ffb670610743a43a1675f4620e84b6, type: 3}
+  heroDetailNarrationClip: {fileID: 0}
