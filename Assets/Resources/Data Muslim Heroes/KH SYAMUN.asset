@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: KH SYAMUN
+  m_EditorClassIdentifier: 
+  heroName: KH SYAM'UN
+  heroTitle: Pendidik Sekaligus Komandan Militer
+  heroLifeSpan: (1894-1949)
+  heroDetail: "\u201CK.H. Syam'un adalah seorang ulama, pejuang,, dan pendidik yang
+    diangkat sebagai Pahlawan Nasional pada tahun 2018. Lahir di Banten pada 5 April
+    1894, Pendidikan agama ditempuhnya hingga ke Mekkah dan Mesir, di mana beliau
+    menimba ilmu di Universitas Al-Azhar. beliau memiliki peran besar dalam perjuangan
+    kemerdekaan Indonesia. Di bidang militer, beliau menjadi komandan batalyon PETA
+    untuk wilayah Cilegon-Serang. Setelah kemerdekaan, beliau diangkat sebagai komandan
+    Tentara Keamanan Rakyat (TKR) dengan pangkat Kolonel, bahkan pernah menjabat
+    sebagai Bupati Serang.\u201D"
+  heroImage: {fileID: 21300000, guid: 0157526795fef8e42b9a0f7e30326088, type: 3}
+  heroDetailNarrationClip: {fileID: 0}
