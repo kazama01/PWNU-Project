@@ -31,8 +31,11 @@ public class MuslimHeroDataUI : MonoBehaviour
         titleTxt.text = CurrentHeroData.heroTitle;
         detailTxt.text = CurrentHeroData.heroDetail;
 
+        gameObject.SetActive(true);
+        detailFrameRect.gameObject.SetActive(true);
+        await UniTask.WaitForSeconds(0.1f);
         detailFrameRect.gameObject.SetActive(false);
-        await UniTask.Yield();
+        await UniTask.WaitForSeconds(0.1f);
         detailFrameRect.gameObject.SetActive(true);
     }
 }

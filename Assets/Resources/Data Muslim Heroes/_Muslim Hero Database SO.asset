@@ -13,4 +13,13 @@ MonoBehaviour:
   m_Name: _Muslim Hero Database SO
   m_EditorClassIdentifier: 
   muslimHeroDatas:
+  - {fileID: 11400000, guid: dc34126ebf8533e4695408221eb26ea1, type: 2}
+  - {fileID: 11400000, guid: d82bfd379605bde438ba45f00160f766, type: 2}
+  - {fileID: 11400000, guid: fa2b5c01524da3a4c8c74c056db1b4f0, type: 2}
+  - {fileID: 11400000, guid: ab06f718c4363a0438134dbf4a707810, type: 2}
   - {fileID: 11400000, guid: 6eab2eaa48810534d9f0f614467a9728, type: 2}
+  - {fileID: 11400000, guid: 83f62cb540f512d49abe1910882881fb, type: 2}
+  - {fileID: 11400000, guid: 13aec6142267e4f428745c716aed2bcc, type: 2}
+  - {fileID: 11400000, guid: 5497068acb3ea4941a2784f35836efd9, type: 2}
+  - {fileID: 11400000, guid: 4c19e92eb2dfeee4790a5870e89ea2c1, type: 2}
+  - {fileID: 11400000, guid: 6514181b6689b6840a56c2a91fa7ada6, type: 2}

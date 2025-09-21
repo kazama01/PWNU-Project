@@ -63,12 +63,12 @@ public class MuslimHeroesManager : SceneManagerBase
         {
             GameObject clone = Instantiate(muslimHeroBtnPrefab.gameObject, buttonParent);
             clone.GetComponent<MuslimHeroButtonUI>().Setup(data);
+            clone.gameObject.name = data.heroName;
         }
     }
 
     public void OpenHeroDataPreview(MuslimHeroDataSO heroData)
     {
-        HeroDataPreview.gameObject.SetActive(true);
         HeroDataPreview.Setup(heroData);
     }
 }
