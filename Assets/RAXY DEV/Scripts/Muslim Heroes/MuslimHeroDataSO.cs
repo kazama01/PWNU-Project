@@ -5,9 +5,12 @@ using UnityEngine;
 public class MuslimHeroDataSO : ScriptableObject
 {
     public string heroName;
+    public string heroTitle;
+    public string heroLifeSpan;
     [TextArea(3, 5)]
     public string heroDetail;
     public Sprite heroImage;
+    public AudioClip heroDetailNarrationClip;
 
     [ShowInInspector]
     [ReadOnly]

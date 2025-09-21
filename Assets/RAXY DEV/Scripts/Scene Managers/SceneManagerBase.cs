@@ -61,6 +61,6 @@ public abstract class SceneManagerBase : MonoBehaviour
 
     void CallPlayerDataUI()
     {
-        PlayerDataManager.Instance.ShowKoin(showPlayerData);
+        PlayerDataManager.Instance?.ShowKoin(showPlayerData);
     }
 }

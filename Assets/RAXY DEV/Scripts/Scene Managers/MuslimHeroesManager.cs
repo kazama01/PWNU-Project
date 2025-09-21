@@ -28,7 +28,7 @@ public class MuslimHeroesManager : SceneManagerBase
     {
         base.Start();
 
-        NotificationManager.Instance.RequestNotification(notificationRequest);
+        NotificationManager.Instance?.RequestNotification(notificationRequest);
 
         NotificationManager.OnNotificationClosed += NotificationClosedHandler;
 
