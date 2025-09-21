@@ -20,7 +20,9 @@ namespace MuslimHeroesMenu
 
         public void OnClick()
         {
-            NotificationManager.Instance.RequestNotification(MuslimHeroDataSO.NotificationRequest);
+            //NotificationManager.Instance.RequestNotification(MuslimHeroDataSO.NotificationRequest);
+
+            MuslimHeroesManager.Instance.OpenHeroDataPreview(MuslimHeroDataSO);
         }
     }
 }

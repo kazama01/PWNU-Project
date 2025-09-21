@@ -10,9 +10,10 @@ public class MuslimHeroesManager : SceneManagerBase
 
     [Title("Muslim Heroes")]
     public MuslimHeroDatabaseSO MuslimHeroDatabaseSO;
+    public MuslimHeroDataUI HeroDataPreview;
     public GameObject muslimHeroBtnPrefab;
     public Transform buttonParent;
-    public NotificationRequest notificationRequest;
+    //public NotificationRequest notificationRequest;
 
     [ShowInInspector]
     [ReadOnly]
@@ -28,25 +29,26 @@ public class MuslimHeroesManager : SceneManagerBase
     {
         base.Start();
 
-        NotificationManager.Instance?.RequestNotification(notificationRequest);
+        //NotificationManager.Instance?.RequestNotification(notificationRequest);
 
-        NotificationManager.OnNotificationClosed += NotificationClosedHandler;
+        //NotificationManager.OnNotificationClosed += NotificationClosedHandler;
 
         SpawnButtons();
+        HeroDataPreview.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
     {
-        NotificationManager.OnNotificationClosed -= NotificationClosedHandler;
+        //NotificationManager.OnNotificationClosed -= NotificationClosedHandler;
     }
 
-    void NotificationClosedHandler(NotificationRequest notificationRequest)
-    {
-        if (notificationRequest.RequestId == this.notificationRequest.RequestId)
-        {
-            Debug.Log("NAISE");
-        }
-    }
+    // void NotificationClosedHandler(NotificationRequest notificationRequest)
+    // {
+    //     if (notificationRequest.RequestId == this.notificationRequest.RequestId)
+    //     {
+    //         Debug.Log("NAISE");
+    //     }
+    // }
 
     void SpawnButtons()
     {
@@ -62,5 +64,11 @@ public class MuslimHeroesManager : SceneManagerBase
             GameObject clone = Instantiate(muslimHeroBtnPrefab.gameObject, buttonParent);
             clone.GetComponent<MuslimHeroButtonUI>().Setup(data);
         }
+    }
+
+    public void OpenHeroDataPreview(MuslimHeroDataSO heroData)
+    {
+        HeroDataPreview.gameObject.SetActive(true);
+        HeroDataPreview.Setup(heroData);
     }
 }
