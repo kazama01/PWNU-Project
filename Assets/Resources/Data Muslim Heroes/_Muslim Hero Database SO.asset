@@ -14,6 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muslimHeroDatas:
   - {fileID: 11400000, guid: 6eab2eaa48810534d9f0f614467a9728, type: 2}
-  - {fileID: 11400000, guid: 36279243c45873347907f0b9ba8bef36, type: 2}
-  - {fileID: 11400000, guid: 2ec81b6854caefc419482ff3f62b467e, type: 2}
-  - {fileID: 11400000, guid: e97c9644a5ee9614291150a01129bf4c, type: 2}
