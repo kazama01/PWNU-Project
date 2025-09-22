@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
   m_Name: KH AS'AD SYAMSUL ARIFIN
   m_EditorClassIdentifier: 
-  heroName: KH NOER ALI
-  heroTitle: Pahlawan Nasional dari Bekasi
-  heroLifeSpan: (1914-1992)
-  heroDetail: "\"KH Noer Alie (1914-1992), Beliau adalah Pahlawan Nasional asal Bekasi
-    berjuluk Singa Karawang-Bekasi, Beliau ulama karismatik dan pendiri Pesantren
-    At-taqwa. la menolak bekerja sama dengan Jepang, membentuk laskar rakyat, serta
-    memimpin Panitia Amanat Rakyat Bekasi untuk mendukung bergabungnya wilayah ke
-    NKRI. Selain menimba ilmu hingga Mekkah, ia juga aktif di politik dan pernah
-    menjabat Ketua Partai\_Masyumi.\""
-  heroImage: {fileID: 21300000, guid: 30ffb670610743a43a1675f4620e84b6, type: 3}
+  heroName: KH AS'AD SYAMSUL ARIFIN
+  heroTitle: Pendiri Nahdlatul Ulama
+  heroLifeSpan: (1897-1990)
+  heroDetail: KH. As'ad Syamsul Arifin (1897-1990) adalah seorang ulama besar Indonesia,
+    tokoh penting dalam pendirian Nahdlatul Ulama (NU) karena menjadi penyambung
+    pesan dari Syaikhona Kholil kepada KH. Hasyim Asy'ari untuk mendirikan NU. Ia
+    adalah pengasuh Pesantren Salafiyah Syafi'iyah, tokoh nasional, dan pernah berperan
+    dalam perjuangan melawan penjajah. Beliau juga dikenal sebagai ulama yang teguh
+    pada Pancasila dan memiliki jiwa nasionalisme yang kuat.
+  heroImage: {fileID: 21300000, guid: 527d6b8276a7ecf4ebf1e39852a4e396, type: 3}
   heroDetailNarrationClip: {fileID: 0}
