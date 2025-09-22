@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useText: 1
   useImage: 0
-  textQuestion: saf'lsdlkxc,.vmx
+  textQuestion: "Yang manakah gambar KH. Hasyim Asy\u2019ari?"
   imageQuestion: {fileID: 0}
   usePoolSO: 1
   _answerDatas: []
   _answerPool: {fileID: 11400000, guid: f620f10dd8e38b9479c912eda28b99e4, type: 2}
-  correctAnswerIndex: 0
-  questionCount: 4
+  correctAnswerIndex: 3
+  answerCount: 4
