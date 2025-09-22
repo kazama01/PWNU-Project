@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de61420b092836248bb2f83a1412e3a1, type: 3}
+  m_Name: Tahun-tahun Answer Pool 1
+  m_EditorClassIdentifier: 
+  answerDatas:
+  - answerId: id_1871
+    useText: 1
+    useImage: 0
+    textAnswer: 1871
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: aa0f26cf9d685064ea8943e2871640f7, type: 3}
+  - answerId: id_1888
+    useText: 1
+    useImage: 0
+    textAnswer: 1888
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 527d6b8276a7ecf4ebf1e39852a4e396, type: 3}
+  - answerId: id_1886
+    useText: 1
+    useImage: 0
+    textAnswer: 1886
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 33905f8376d35e54db4d1606f31d25eb, type: 3}
+  - answerId: id_1914
+    useText: 1
+    useImage: 0
+    textAnswer: 1914
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 82a2c5736a20cb14a81a8e9c9b0eda0f, type: 3}
+  - answerId: id_1897
+    useText: 1
+    useImage: 0
+    textAnswer: 1897
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 30ffb670610743a43a1675f4620e84b6, type: 3}
+  - answerId: id_1883
+    useText: 1
+    useImage: 0
+    textAnswer: 1883
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: dc271b87ff57fc44cb5b446c2e81e999, type: 3}
+  - answerId: id_1899
+    useText: 1
+    useImage: 0
+    textAnswer: 1899
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 0157526795fef8e42b9a0f7e30326088, type: 3}
+  - answerId: id_1820
+    useText: 1
+    useImage: 0
+    textAnswer: 1820
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: dcdaae021a5811145b4062d38c9579e8, type: 3}
+  - answerId: id_1909
+    useText: 1
+    useImage: 0
+    textAnswer: 1909
+    fontSize: 90
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    imageAnswer: {fileID: 21300000, guid: 44fd7540ce0c3e54eb16d438ac2ce4cd, type: 3}
