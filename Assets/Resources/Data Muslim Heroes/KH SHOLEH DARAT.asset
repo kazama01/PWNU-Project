@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1b2122ba91ac14c9ba5298cc9176a3, type: 3}
+  m_Name: KH SHOLEH DARAT
+  m_EditorClassIdentifier: 
+  heroName: KH SHOLEH DARAT
+  heroTitle: Guru Pendiri NU dan Muhammadiyah
+  heroLifeSpan: "(\xB11820\u20131903)"
+  heroDetail: "\u201CKH Sholeh Darat (\xB11820\u20131903), ulama besar asal Jepara
+    yang wafat di Semarang, dikenal sebagai guru para tokoh pendiri NU dan Muhammadiyah,
+    termasuk KH Hasyim Asy\u2019ari, KH Ahmad Dahlan, serta R.A. Kartini. Ia pernah
+    mendapat lisensi mengajar di Mekkah, lalu mendirikan pesantren di Semarang, berdakwah,
+    dan menulis banyak kitab berbahasa Jawa aksara Pegon untuk memudahkan masyarakat..\u201D"
+  heroImage: {fileID: 21300000, guid: dc271b87ff57fc44cb5b446c2e81e999, type: 3}
+  heroDetailNarrationClip: {fileID: 0}

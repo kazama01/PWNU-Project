@@ -7,152 +7,156 @@ public class TebakTokohManager : SceneManagerBase
 {
     public static TebakTokohManager Instance;
 
-    [Title("Tebak Tokoh")]
-    public MuslimHeroDatabaseSO MuslimHeroDatabaseSO;
+    [TitleGroup("Tebak Tokoh")]
+    public TextMeshProUGUI questionTxt;
 
-    public string questionString = "Yang manakah gambar dari [A]?";
-    [TextArea(3, 5)]
-    public string correctAnswerString = "Ya Benar!!!\n\nIni adalah gambar dari [A]";
-    [TextArea(3, 5)]
-    public string wrongAnswerString = "Ini bukan gambar dari [A]\n\nCoba diperhatikan lagi!!!";
-    public TextMeshProUGUI questionText;
-    public GameObject answerButtonPrefab;
-    public Transform answerParent;
-    public int answerCount = 4;
+    [TitleGroup("Tebak Tokoh")]
+    public QuizAnswerButtonUI answerPrefab;
 
-    public int koinReward;
+    [TitleGroup("Tebak Tokoh")]
+    public QuizQuestionDatabaseSO questionDb;
 
-    [Title("Notification Requests")]
-    public NotificationRequest correctReq;
-    public NotificationRequest wrongReq;
+    [TitleGroup("Tebak Tokoh")]
+    public Transform left;
 
-    [FoldoutGroup("Runtime")]
-    [ShowInInspector]
-    [ReadOnly]
-    MuslimHeroDataSO _selectedCorrectSO;
+    [TitleGroup("Tebak Tokoh")]
+    public Transform right;
 
-    [FoldoutGroup("Runtime")]
-    [ShowInInspector]
-    [ReadOnly]
-    int _randomCorrectIndex;
+    [TitleGroup("Debug"), ShowInInspector, ReadOnly]
+    private QuizQuestionSO currentQuestion;
 
-    [FoldoutGroup("Runtime")]
-    [ShowInInspector]
-    [ReadOnly]
-    List<MuslimHeroDataSO> _selectedWrongSoList;
-
-    [FoldoutGroup("Runtime")]
-    [ShowInInspector]
-    [ReadOnly]
-    List<GameObject> _spawnedAnswer;
-
-    [FoldoutGroup("Runtime")]
-    [ShowInInspector]
-    [ReadOnly]
-    NotificationRequest _currentNotifReq;
+    // Cache the current answers so we don’t call GetAnswers() multiple times
+    private List<QuizAnswerData> currentAnswers;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogWarning($"Duplicate {nameof(TebakTokohManager)} detected, destroying one.");
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
     }
 
     protected override void Start()
     {
         base.Start();
-
-        ShowQuestion();
-
-        NotificationManager.OnNotificationClosed += NotificationClosedHandler;
-    }
-
-    private void OnDestroy()
-    {
-        NotificationManager.OnNotificationClosed -= NotificationClosedHandler;
-    }
-
-    void NotificationClosedHandler(NotificationRequest request)
-    {
-        if (request.RequestId == _currentNotifReq.RequestId)
-        {
-            ShowQuestion();
-        }
+        SetupQuestionAndAnswer();
     }
 
     [Button]
-    void ShowQuestion()
+    public void SetupQuestionAndAnswer()
     {
-        _selectedCorrectSO = MuslimHeroDatabaseSO.GetRandomHero();
-        _randomCorrectIndex = Random.Range(0, answerCount);
+        SelectQuestion();
 
-        // Get the wrong answers, excluding the correct one
-        _selectedWrongSoList = MuslimHeroDatabaseSO.GetRandomHeroes(
-            answerCount - 1,
-            new List<MuslimHeroDataSO> { _selectedCorrectSO }
-        );
+        questionTxt.text = currentQuestion.textQuestion;
 
-        questionText.text = questionString.Replace("[A]", _selectedCorrectSO.NotificationRequest.headerMessage);
-
-        // Clear previous answers
-        foreach (Transform child in answerParent)
+        // Safety: no prefab or no question DB
+        if (answerPrefab == null)
         {
-            Destroy(child.gameObject);
+            Debug.LogError("AnswerPrefab is missing!");
+            return;
         }
 
-        _spawnedAnswer = new List<GameObject>();
-
-        int wrongIndex = 0;
-
-        for (int i = 0; i < answerCount; i++)
+        if (currentQuestion == null)
         {
-            GameObject clone = Instantiate(answerButtonPrefab, answerParent);
-            _spawnedAnswer.Add(clone);
+            Debug.LogWarning("No current question selected.");
+            return;
+        }
 
-            var buttonUI = clone.GetComponent<TebakTokohAnswerButtonUI>();
+        ClearChildren(left);
+        ClearChildren(right);
 
-            if (i == _randomCorrectIndex)
-            {
-                buttonUI.Setup(_selectedCorrectSO, i);
-                clone.name = _selectedCorrectSO.heroName + " - Answer Button";
-            }
-            else
-            {
-                buttonUI.Setup(_selectedWrongSoList[wrongIndex], i);
-                clone.name = _selectedWrongSoList[wrongIndex].heroName + " - Answer Button";
+        // Get the answer set ONCE and cache it
+        currentAnswers = currentQuestion.GetAnswers();
 
-                wrongIndex++;
-            }
+        if (currentAnswers == null || currentAnswers.Count == 0)
+        {
+            Debug.LogWarning("No answers available for current question.");
+            return;
+        }
+
+        // Spawn answers
+        for (int i = 0; i < currentAnswers.Count; i++)
+        {
+            var answerData = currentAnswers[i];
+            if (answerData == null)
+                continue;
+
+            var answerClone = Instantiate(answerPrefab,
+                (i % 2 == 0 ? left : right),   // parent on spawn
+                false);                        // keep local transform
+
+            answerClone.Setup(answerData, i);
         }
     }
 
-    public void TryAnswer(MuslimHeroDataSO answer)
+    private void ClearChildren(Transform parent)
     {
-        if (answer == _selectedCorrectSO)
+        if (parent == null) return;
+
+        // Editor-safe destroy
+        for (int i = parent.childCount - 1; i >= 0; i--)
         {
-            Correct();
+            var child = parent.GetChild(i);
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+                DestroyImmediate(child.gameObject);
+            else
+#endif
+                Destroy(child.gameObject);
+        }
+    }
+
+    private void SelectQuestion()
+    {
+        if (questionDb == null)
+        {
+            Debug.LogError("Question Database not assigned!");
+            currentQuestion = null;
+            return;
+        }
+
+        currentQuestion = questionDb.GetRandomQuestion();
+    }
+
+    public bool TryAnswer(int answerIndex)
+    {
+        if (currentAnswers == null || currentAnswers.Count == 0)
+        {
+            Debug.LogWarning("No answers to validate.");
+            return false;
+        }
+
+        if (answerIndex < 0 || answerIndex >= currentAnswers.Count)
+        {
+            Debug.LogError($"Answer index {answerIndex} is out of range!");
+            return false;
+        }
+
+        var chosen = currentAnswers[answerIndex];
+
+        if (chosen == null)
+        {
+            Debug.LogWarning("Selected answer data is null.");
+            return false;
+        }
+
+        bool isCorrect = currentQuestion.CorrectAnswerId == chosen.answerId; // <- assuming your QuizAnswerData has this flag
+
+        if (isCorrect)
+        {
+            Debug.Log("Correct Answer!");
+            // TODO: add reward, score, next question, etc.
         }
         else
         {
-            Wrong(answer);
+            Debug.Log("Wrong Answer!");
+            // TODO: handle fail state
         }
-    }
 
-    void Correct()
-    {
-        correctReq.imageSprite = _selectedCorrectSO.NotificationRequest.imageSprite;
-        correctReq.message = correctAnswerString.Replace("[A]", _selectedCorrectSO.heroName);
-
-        NotificationManager.Instance.RequestNotification(correctReq);
-        _currentNotifReq = correctReq;
-
-        PlayerDataManager.Instance.AddKoin(koinReward);
-    }
-
-    void Wrong(MuslimHeroDataSO wrongDataSO)
-    {
-        wrongReq.imageSprite = wrongDataSO.NotificationRequest.imageSprite;
-        wrongReq.message = wrongAnswerString.Replace("[A]", _selectedCorrectSO.heroName);
-
-        NotificationManager.Instance.RequestNotification(wrongReq);
-        _currentNotifReq = wrongReq;
+        return isCorrect;
     }
 }

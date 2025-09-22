@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de61420b092836248bb2f83a1412e3a1, type: 3}
+  m_Name: Tokoh-tokoh Answer Pool
+  m_EditorClassIdentifier: 
+  answerDatas:
+  - answerId: abdul_wachid
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: aa0f26cf9d685064ea8943e2871640f7, type: 3}
+  - answerId: asad_syamsul
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 527d6b8276a7ecf4ebf1e39852a4e396, type: 3}
+  - answerId: bisri_syansuri
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 33905f8376d35e54db4d1606f31d25eb, type: 3}
+  - answerId: hasyim_asyari
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 82a2c5736a20cb14a81a8e9c9b0eda0f, type: 3}
+  - answerId: noer_ali
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 30ffb670610743a43a1675f4620e84b6, type: 3}
+  - answerId: sholeh_darat
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: dc271b87ff57fc44cb5b446c2e81e999, type: 3}
+  - answerId: syamun
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 0157526795fef8e42b9a0f7e30326088, type: 3}
+  - answerId: wahab_chasbullah
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: dcdaae021a5811145b4062d38c9579e8, type: 3}
+  - answerId: zaenal_mustofa
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 44fd7540ce0c3e54eb16d438ac2ce4cd, type: 3}
+  - answerId: zainul_arifin
+    useText: 0
+    useImage: 1
+    textAnswer: 
+    imageAnswer: {fileID: 21300000, guid: 64fbcd03039fd6247ab30235079c6a11, type: 3}
