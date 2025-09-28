@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useText: 1
   useImage: 0
-  textQuestion: Bisa tunjukkan gambar KH Sholeh Darat?
+  textQuestion: Kapan tepatnya KH Noer Ali dilahirkan?
   imageQuestion: {fileID: 0}
   usePoolSO: 1
   _answerDatas: []
-  _answerPool: {fileID: 11400000, guid: f620f10dd8e38b9479c912eda28b99e4, type: 2}
-  correctAnswerIndex: 5
+  _answerPool: {fileID: 11400000, guid: 4a02488389af4c345a2a211d5bd20888, type: 2}
+  correctAnswerIndex: 3
   answerCount: 4

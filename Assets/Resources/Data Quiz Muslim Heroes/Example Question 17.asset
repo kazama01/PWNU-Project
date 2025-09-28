@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useText: 1
   useImage: 0
-  textQuestion: Bisa tunjukkan gambar KH Sholeh Darat?
+  textQuestion: Di antara gambar ini, yang mana KH Zainul Arifin?
   imageQuestion: {fileID: 0}
   usePoolSO: 1
   _answerDatas: []
   _answerPool: {fileID: 11400000, guid: f620f10dd8e38b9479c912eda28b99e4, type: 2}
-  correctAnswerIndex: 5
+  correctAnswerIndex: 9
   answerCount: 4
