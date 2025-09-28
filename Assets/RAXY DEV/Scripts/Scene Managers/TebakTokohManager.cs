@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+using MEC;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +23,15 @@ public class TebakTokohManager : SceneManagerBase
 
     [TitleGroup("Tebak Tokoh")]
     public Transform right;
+
+    [TitleGroup("Result")]
+    public GameObject resultPanel;
+
+    [TitleGroup("Result")]
+    public GameObject correct;
+
+    [TitleGroup("Result")]
+    public GameObject wrong;
 
     [TitleGroup("Debug"), ShowInInspector, ReadOnly]
     private QuizQuestionSO currentQuestion;
@@ -106,7 +117,7 @@ public class TebakTokohManager : SceneManagerBase
                 DestroyImmediate(child.gameObject);
             else
 #endif
-                Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
 
@@ -145,18 +156,44 @@ public class TebakTokohManager : SceneManagerBase
         }
 
         bool isCorrect = currentQuestion.CorrectAnswerId == chosen.answerId; // <- assuming your QuizAnswerData has this flag
+        HandleResultCoHandle = Timing.RunCoroutine(HandleResultCo(isCorrect));
 
         if (isCorrect)
         {
             Debug.Log("Correct Answer!");
-            // TODO: add reward, score, next question, etc.
         }
         else
         {
             Debug.Log("Wrong Answer!");
-            // TODO: handle fail state
         }
 
         return isCorrect;
+    }
+
+    public void OnClick_Next()
+    {
+        Timing.KillCoroutines(HandleResultCoHandle);
+        SetupQuestionAndAnswer();
+        resultPanel.SetActive(false);
+    }
+
+    CoroutineHandle HandleResultCoHandle;
+    IEnumerator<float> HandleResultCo(bool isCorrect)
+    {
+        resultPanel.SetActive(true);
+        if (isCorrect)
+        {
+            correct.SetActive(true);
+            wrong.SetActive(false);
+        }
+        else
+        {
+            correct.SetActive(false);
+            wrong.SetActive(true);
+        }
+
+        yield return Timing.WaitForSeconds(2f);
+        resultPanel.SetActive(false);
+        SetupQuestionAndAnswer();
     }
 }
