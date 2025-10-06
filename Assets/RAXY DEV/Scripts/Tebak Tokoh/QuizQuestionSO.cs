@@ -18,6 +18,9 @@ public class QuizQuestionSO : ScriptableObject
     public string textQuestion;
 
     [TitleGroup("Question")]
+    public AudioClip questionNarrationClip;
+
+    [TitleGroup("Question")]
     [ShowIf("@useImage")]
     public Sprite imageQuestion;
 

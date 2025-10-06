@@ -4,6 +4,7 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class TebakTokohManager : SceneManagerBase
 {
@@ -33,11 +34,19 @@ public class TebakTokohManager : SceneManagerBase
     [TitleGroup("Result")]
     public GameObject wrong;
 
+    [TitleGroup("Result")]
+    public AudioResource correctClip;
+
+    [TitleGroup("Result")]
+    public AudioResource wrongClip;
+
     [TitleGroup("Debug"), ShowInInspector, ReadOnly]
     private QuizQuestionSO currentQuestion;
 
     // Cache the current answers so we don’t call GetAnswers() multiple times
     private List<QuizAnswerData> currentAnswers;
+
+    AudioSource _audioSource;
 
     private void Awake()
     {
@@ -49,6 +58,7 @@ public class TebakTokohManager : SceneManagerBase
         }
 
         Instance = this;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Start()
@@ -117,7 +127,7 @@ public class TebakTokohManager : SceneManagerBase
                 DestroyImmediate(child.gameObject);
             else
 #endif
-            Destroy(child.gameObject);
+                Destroy(child.gameObject);
         }
     }
 
@@ -176,25 +186,40 @@ public class TebakTokohManager : SceneManagerBase
         Timing.KillCoroutines(HandleResultCoHandle);
         SetupQuestionAndAnswer();
         resultPanel.SetActive(false);
+
+        _audioSource.Stop();
     }
 
     CoroutineHandle HandleResultCoHandle;
     IEnumerator<float> HandleResultCo(bool isCorrect)
     {
+        _audioSource.Stop();
+
         resultPanel.SetActive(true);
         if (isCorrect)
         {
             correct.SetActive(true);
             wrong.SetActive(false);
+
+            _audioSource.resource = correctClip;
+            _audioSource.Play();
         }
         else
         {
             correct.SetActive(false);
             wrong.SetActive(true);
+
+            _audioSource.resource = wrongClip;
+            _audioSource.Play();
         }
 
         yield return Timing.WaitForSeconds(2f);
         resultPanel.SetActive(false);
         SetupQuestionAndAnswer();
+    }
+
+    public void OnClick_SuaraBtn()
+    {
+        _audioSource.PlayOneShot(currentQuestion.questionNarrationClip);
     }
 }

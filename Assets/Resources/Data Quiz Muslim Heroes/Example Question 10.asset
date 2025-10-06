@@ -15,6 +15,7 @@ MonoBehaviour:
   useText: 1
   useImage: 0
   textQuestion: Kapan tepatnya KH As'ad Syamsul Arifin lahir?
+  questionNarrationClip: {fileID: 8300000, guid: 6a5d6cbc362e23f4693bfda5c1ddc4d9, type: 3}
   imageQuestion: {fileID: 0}
   usePoolSO: 1
   _answerDatas: []
