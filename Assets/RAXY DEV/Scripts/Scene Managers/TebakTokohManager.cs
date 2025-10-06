@@ -161,6 +161,7 @@ public class TebakTokohManager : SceneManagerBase
         if (isCorrect)
         {
             Debug.Log("Correct Answer!");
+            PlayerDataManager.Instance.AddKoin(10);
         }
         else
         {
