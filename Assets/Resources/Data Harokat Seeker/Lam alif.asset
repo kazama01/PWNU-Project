@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47d61b93e79395c48b79e213d6602f15, type: 3}
-  m_Name: Lam alif
+  m_Name: Lam Alif
   m_EditorClassIdentifier: 
   letter: 27
   letterSprite: {fileID: 21300000, guid: 6f2852cfbab179a4d86c0cba340bbb8c, type: 3}

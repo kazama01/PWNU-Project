@@ -480,7 +480,7 @@ PrefabInstance:
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6027708775892311235, guid: 22c7107a9e101794fb6f6a6ecf5764df, type: 3}
+      objectReference: {fileID: 21300000, guid: 22c7107a9e101794fb6f6a6ecf5764df, type: 3}
     - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1955448553306655712, guid: fd1d9ad70916123448ebf28a7d42800f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd1d9ad70916123448ebf28a7d42800f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2641698482785147981, guid: 6631f40d079a8b44687ef0efdafb57e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6631f40d079a8b44687ef0efdafb57e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -931,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6502327726901076774, guid: 22ed8abf1eaafb94b8747d0fa394b174, type: 3}
+      objectReference: {fileID: 21300000, guid: 22ed8abf1eaafb94b8747d0fa394b174, type: 3}
     - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1240,7 +1240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5122191049072581700, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Name
-      value: Petualangan Menulis Button
+      value: Hijaiyah Hunter Button
       objectReference: {fileID: 0}
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Type
@@ -1249,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 6664805273788260282, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4710667548969555738, guid: 8964737d7b621594280321302f2ee472, type: 3}
+      objectReference: {fileID: 21300000, guid: 8964737d7b621594280321302f2ee472, type: 3}
     - target: {fileID: 8220096160931879436, guid: 013c27be61a0cba48b1464afcc9b409d, type: 3}
       propertyPath: m_IsActive
       value: 0
