@@ -24,4 +24,4 @@ MonoBehaviour:
     Tentara Keamanan Rakyat (TKR) dengan pangkat Kolonel, bahkan pernah menjabat
     sebagai Bupati Serang.\u201D"
   heroImage: {fileID: 21300000, guid: 0157526795fef8e42b9a0f7e30326088, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: fb18f90f2fe8cb3429e1b33fe2279009, type: 3}

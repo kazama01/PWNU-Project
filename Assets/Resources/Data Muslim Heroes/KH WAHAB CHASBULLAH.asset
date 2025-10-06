@@ -22,4 +22,4 @@ MonoBehaviour:
     nasionalisme santri, serta aktif dalam pergerakan kebangsaan. Atas jasanya, ia
     ditetapkan sebagai Pahlawan Nasional pada 2014."
   heroImage: {fileID: 21300000, guid: dcdaae021a5811145b4062d38c9579e8, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: 80583d2375071254cbb32c84c972c2fd, type: 3}

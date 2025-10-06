@@ -38,4 +38,9 @@ public class MuslimHeroDataUI : MonoBehaviour
         await UniTask.WaitForSeconds(0.1f);
         detailFrameRect.gameObject.SetActive(true);
     }
+
+    public void OnClick_SuaraBtn()
+    {
+        MuslimHeroesManager.Instance.PlayAudio(CurrentHeroData.heroDetailNarrationClip);
+    }
 }

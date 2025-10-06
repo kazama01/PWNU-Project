@@ -21,4 +21,4 @@ MonoBehaviour:
     (9 kitab hadis), dan merupakan ayah KH. A. Wahid Hasyim (pahlawan nasional) serta
     kakek KH. Abdurrahman Wahid, Presiden RI ke-4."
   heroImage: {fileID: 21300000, guid: 82a2c5736a20cb14a81a8e9c9b0eda0f, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: c606e43c8cb53a14ea9d198f6bc40d4b, type: 3}

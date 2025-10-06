@@ -13,25 +13,23 @@ public class MuslimHeroesManager : SceneManagerBase
     public MuslimHeroDataUI HeroDataPreview;
     public GameObject muslimHeroBtnPrefab;
     public Transform buttonParent;
-    //public NotificationRequest notificationRequest;
 
     [ShowInInspector]
     [ReadOnly]
     [NonSerialized]
     List<GameObject> _spawnedButton;
 
+    AudioSource _audioSource;
+
     private void Awake()
     {
         Instance = this;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Start()
     {
         base.Start();
-
-        //NotificationManager.Instance?.RequestNotification(notificationRequest);
-
-        //NotificationManager.OnNotificationClosed += NotificationClosedHandler;
 
         SpawnButtons();
         HeroDataPreview.gameObject.SetActive(false);
@@ -39,16 +37,7 @@ public class MuslimHeroesManager : SceneManagerBase
 
     private void OnDestroy()
     {
-        //NotificationManager.OnNotificationClosed -= NotificationClosedHandler;
     }
-
-    // void NotificationClosedHandler(NotificationRequest notificationRequest)
-    // {
-    //     if (notificationRequest.RequestId == this.notificationRequest.RequestId)
-    //     {
-    //         Debug.Log("NAISE");
-    //     }
-    // }
 
     void SpawnButtons()
     {
@@ -70,5 +59,11 @@ public class MuslimHeroesManager : SceneManagerBase
     public void OpenHeroDataPreview(MuslimHeroDataSO heroData)
     {
         HeroDataPreview.Setup(heroData);
+    }
+
+    [Button]
+    public void PlayAudio(AudioClip clip)
+    {
+        _audioSource.PlayOneShot(clip);
     }
 }

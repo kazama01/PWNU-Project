@@ -22,4 +22,4 @@ MonoBehaviour:
     sosok progresif yang membawa modernisasi pendidikan dan aktif dalam perjuangan
     kemerdekaan Indonesia."
   heroImage: {fileID: 21300000, guid: aa0f26cf9d685064ea8943e2871640f7, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: 54c3a05f834983444aa07720285f3e89, type: 3}

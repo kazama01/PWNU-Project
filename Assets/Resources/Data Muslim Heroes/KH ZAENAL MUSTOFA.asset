@@ -23,4 +23,4 @@ MonoBehaviour:
     Jepang pada 25 Oktober 1944, dan jenazahnya akhirnya dipindahkan dari Ancol ke
     Sukamanah, Tasikmalaya, pada tahun 1973.\u201D"
   heroImage: {fileID: 21300000, guid: 44fd7540ce0c3e54eb16d438ac2ce4cd, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: f59e8e29fcd561341b71469f99263df3, type: 3}

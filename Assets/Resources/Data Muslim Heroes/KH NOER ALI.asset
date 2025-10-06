@@ -22,4 +22,4 @@ MonoBehaviour:
     NKRI. Selain menimba ilmu hingga Mekkah, ia juga aktif di politik dan pernah
     menjabat Ketua Partai\_Masyumi.\""
   heroImage: {fileID: 21300000, guid: 30ffb670610743a43a1675f4620e84b6, type: 3}
-  heroDetailNarrationClip: {fileID: 0}
+  heroDetailNarrationClip: {fileID: 8300000, guid: 19e4ba2ea9620f64889ddf8e0afd745e, type: 3}
