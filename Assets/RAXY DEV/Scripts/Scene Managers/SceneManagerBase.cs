@@ -23,6 +23,7 @@ public abstract class SceneManagerBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        Debug.Log("Start Coroutine on MenuManager");
         Timing.RunCoroutine(StartCo().CancelWith(gameObject));
     }
 
@@ -43,6 +44,8 @@ public abstract class SceneManagerBase : MonoBehaviour
 
     void SetBackButton()
     {
+        Debug.Log("Try to show back button");
+
         BackManager.Instance?.ShowBackButton(useBackButton);
         if (useBackButton)
         {
@@ -61,6 +64,7 @@ public abstract class SceneManagerBase : MonoBehaviour
 
     void CallPlayerDataUI()
     {
+        Debug.Log("Try to show KOIN");
         PlayerDataManager.Instance?.ShowKoin(showPlayerData);
     }
 }
